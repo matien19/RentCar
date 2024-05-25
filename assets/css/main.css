@@ -697,6 +697,103 @@ section {
   object-fit: cover;
 }
 /*--------------------------------------------------------------
+# kontak
+--------------------------------------------------------------*/
+
+.kontak-banner {
+  width: 100%;
+  min-height: 50vh;
+  background-color: var(--color-secondary);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  padding: 120px 0 60px 0;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: bold;
+  background-image: url(../img/kontak/kontakbg.png);
+}
+.kontak-main i {
+  background-color: #fff;
+  font-size: 40px;
+  padding: 15px;
+  border-radius: 50%;
+  width: 100%;
+  height: auto;
+}
+
+.kontak-main h3 {
+  font-weight: bold;
+  padding: 30px 0;
+}
+
+.kontak-form h1 {
+  font-weight: bold;
+}
+.kontak-form button {
+  border-radius: 20px;
+  border: 1px solid #000080;
+  background-color: #000080;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 12px 20px;
+  letter-spacing: 1px;
+  transition: transform 80ms ease-in;
+}
+
+.kontak-form button:active {
+  transform: scale(0.95);
+}
+
+.kontak-form button:focus {
+  outline: none;
+}
+
+.kontak-form button.ghost {
+  background-color: transparent;
+  border-color: #ffffff;
+}
+
+.kontak-form input {
+  background-color: #c3d9d8;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+.kontak-form .form .pesan {
+  height: 80px;
+}
+/*--------------------------------------------------------------
+# tentang-kami
+--------------------------------------------------------------*/
+
+.tentang-kami-banner {
+  width: 100%;
+  min-height: 50vh;
+  background-color: var(--color-secondary);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  padding: 120px 0 60px 0;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: bold;
+  background-image: url(../img/tentang_kami/tentang_kami.png);
+}
+.main-deskripsi {
+  font-size: larger;
+}
+.main-deskripsi h2 {
+  font-weight: bold;
+}
+.main-deskripsi img {
+  width: 50vh;
+}
+.tagline h1 {
+  font-weight: bold;
+  font-size: 70px;
+}
+/*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
 .footer {
