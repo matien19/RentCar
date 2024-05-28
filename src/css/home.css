@@ -1,0 +1,22 @@
+/*--------------------------------------------------------------
+# banner
+--------------------------------------------------------------*/
+.banner {
+  font-family: var(--font-primary);
+}
+
+.konten {
+  color: #fff;
+  padding: 20px;
+  font-weight: bold;
+}
+.banner .banner-fitur {
+  color: #fff;
+
+  background-size: cover;
+  background-position: center;
+  min-height: 400px;
+}
+.banner .banner-fitur .card-tittle {
+  font-weight: bold;
+}

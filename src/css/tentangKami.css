@@ -1,0 +1,29 @@
+/*--------------------------------------------------------------
+# tentang-kami
+--------------------------------------------------------------*/
+
+.tentang-kami-banner {
+  width: 100%;
+  min-height: 50vh;
+  background-color: var(--color-secondary);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  padding: 120px 0 60px 0;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: bold;
+  background-image: url(/assets/img/tentang_kami/tentang_kami.png);
+}
+.main-deskripsi {
+  font-size: larger;
+}
+.main-deskripsi h2 {
+  font-weight: bold;
+}
+.main-deskripsi img {
+  width: 50vh;
+}
+.tagline h1 {
+  font-weight: bold;
+  font-size: 70px;
+}
