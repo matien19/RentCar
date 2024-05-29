@@ -878,6 +878,51 @@ section {
 }
 
 /*--------------------------------------------------------------
+# Detail Order
+--------------------------------------------------------------*/
+.detail .card {
+  min-height: auto;
+}
+.detail .card a {
+  color: #fff;
+}
+.detail .card .btn-pengemudi {
+  color: #fff;
+  background-color: #000080;
+}
+.detail .card .card-body {
+  padding: 15px;
+}
+
+.detail .card .card-body .price {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.detail .card .card-body .text-muted {
+  text-align: right;
+}
+
+.img-circle {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+.rounded-card {
+  border-radius: 10px;
+  min-height: 12rem;
+}
+
+.rounded-card .card-title {
+  font-size: 14px;
+  font-weight: bold;
+}
+.rounded-card .card-text {
+  font-size: 10px;
+}
+
+/*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
 .footer {
