@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>RoamRise</title>
+    <meta content="" name="description" />
+    <meta content="" name="keywords" />
+
+    <!-- Favicons -->
+    <link href="assets/img/LogoRent.png" rel="icon" />
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+    <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" />
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" />
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+
+    <!-- Template Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <!-- ======= Header ======= -->
+    <header id="header" class="header d-flex align-items-center fixed-top sticked">
+      <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+        <a href="index.html" class="logo">
+          <img src="assets/img/LogoRent.png" alt="logo" />
+        </a>
+
+        <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+        <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+        <nav id="navbar" class="navbar">
+          <ul>
+            <li><a href="./">Beranda</a></li>
+            <li><a href="./order.html" class="active">Order</a></li>
+            <li><a href="./tentang_kami.html">Tentang Kami</a></li>
+            <li><a href="./kontak">Hubungi Kami</a></li>
+          </ul>
+        </nav>
+        <nav id="navbar2" class="navbar">
+          <ul>
+            <li><a href="./login/">Masuk</a></li>
+            <li><a class="get-a-quote" href="#">Daftar</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!-- End Header -->
+
+    <main id="main">
+      <section class="order">
+        <div class="container">
+          <div class="row mb-12">
+            <div class="col-md-3">
+              <!-- Tabel -->
+              <table class="table">
+                <!-- Filter -->
+                <thead>
+                  <tr>
+                    <th scope="col">Filter</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Kisaran Harga</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <button class="btn btn-secondary">Rendah</button>
+                      <button class="btn btn-secondary">Tinggi</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Kapasitas Kursi</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <button class="btn btn-secondary">4 Kursi</button>
+                      <button class="btn btn-secondary">5-6 Kursi</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="col-md-9 d-flex flex-column gap-3">
+              <div class="card">
+                <div class="row g-0">
+                  <div class="row corner-text-manual text-center">Manual</div>
+                  <div class="row">
+                    <div class="col-md-4">
+                      <img src="./assets/img/armada/Avanza_New_2024.jpeg" class="card-img-top" alt="Avanza New 2024" />
+                    </div>
+                    <div class="col-md-8">
+                      <div class="card-body">
+                        <h5 class="card-title">Avanza New 2024</h5>
+                        <div class="d-flex justify-content-between">
+                          <div>
+                            <i class="fas fa-car"></i> 6 Kursi<br />
+                            <i class="fas fa-suitcase"></i> 3 Koper<br />
+                          </div>
+                          <div>
+                            <i class="fas fa-shield-alt"></i> Asuransi<br />
+                            <i class="fas fa-user"></i> Pengemudi<br />
+                          </div>
+                          <div class="text-end">
+                            <p>Rp 500.000/Hari</p>
+                            <a href="#" class="btn btn-sm btn-warning rounded-5 w-75">Pilih</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="row g-0">
+                  <div class="row corner-text-otomatis text-center">Otomatis</div>
+                  <div class="row">
+                    <div class="col-md-4">
+                      <img src="./assets/img/armada/Avanza_New_2024.jpeg" class="card-img-top" alt="Avanza New 2024" />
+                    </div>
+                    <div class="col-md-8">
+                      <div class="card-body">
+                        <h5 class="card-title">Avanza New 2024</h5>
+                        <div class="d-flex justify-content-between">
+                          <div>
+                            <i class="fas fa-car"></i> 6 Kursi<br />
+                            <i class="fas fa-suitcase"></i> 3 Koper<br />
+                          </div>
+                          <div>
+                            <i class="fas fa-shield-alt"></i> Asuransi<br />
+                            <i class="fas fa-user"></i> Pengemudi<br />
+                          </div>
+                          <div class="text-end">
+                            <p>Rp 500.000/Hari</p>
+                            <a href="#" class="btn btn-sm btn-warning rounded-5 w-75">Pilih</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="row g-0">
+                  <div class="row corner-text-otomatis text-center">Otomatis</div>
+                  <div class="row">
+                    <div class="col-md-4">
+                      <img src="./assets/img/armada/Innova_Reborn_2022.png" class="card-img-top" alt="Avanza New 2024" />
+                    </div>
+                    <div class="col-md-8">
+                      <div class="card-body">
+                        <h5 class="card-title">Innova Reborn 2022</h5>
+                        <div class="d-flex justify-content-between">
+                          <div>
+                            <i class="fas fa-car"></i> 6 Kursi<br />
+                            <i class="fas fa-suitcase"></i> 3 Koper<br />
+                          </div>
+                          <div>
+                            <i class="fas fa-shield-alt"></i> Asuransi<br />
+                            <i class="fas fa-user"></i> Pengemudi<br />
+                          </div>
+                          <div class="text-end">
+                            <p>Rp 400.000/Hari</p>
+                            <a href="#" class="btn btn-sm btn-warning rounded-5 w-75">Pilih</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="row g-0">
+                  <div class="row corner-text-manual text-center">Manual</div>
+                  <div class="row">
+                    <div class="col-md-4">
+                      <img src="./assets/img/armada/Innova_Reborn_2022.png" class="card-img-top" alt="Avanza New 2024" />
+                    </div>
+                    <div class="col-md-8">
+                      <div class="card-body">
+                        <h5 class="card-title">Innova Reborn 2022</h5>
+                        <div class="d-flex justify-content-between">
+                          <div>
+                            <i class="fas fa-car"></i> 6 Kursi<br />
+                            <i class="fas fa-suitcase"></i> 3 Koper<br />
+                          </div>
+                          <div>
+                            <i class="fas fa-shield-alt"></i> Asuransi<br />
+                            <i class="fas fa-user"></i> Pengemudi<br />
+                          </div>
+                          <div class="text-end">
+                            <p>Rp 400.000/Hari</p>
+                            <a href="#" class="btn btn-sm btn-warning rounded-5 w-75">Pilih</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="row g-0">
+                  <div class="row corner-text-manual text-center">Manual</div>
+                  <div class="row">
+                    <div class="col-md-4">
+                      <img src="./assets/img/armada/Toyota_Avanza_2016.png" class="card-img-top" alt="Avanza New 2024" />
+                    </div>
+                    <div class="col-md-8">
+                      <div class="card-body">
+                        <h5 class="card-title">Avanza 2016</h5>
+                        <div class="d-flex justify-content-between">
+                          <div>
+                            <i class="fas fa-car"></i> 6 Kursi<br />
+                            <i class="fas fa-suitcase"></i> 3 Koper<br />
+                          </div>
+                          <div>
+                            <i class="fas fa-shield-alt"></i> Asuransi<br />
+                            <i class="fas fa-user"></i> Pengemudi<br />
+                          </div>
+                          <div class="text-end">
+                            <p>Rp 150.000/Hari</p>
+                            <a href="#" class="btn btn-sm btn-warning rounded-5 w-75">Pilih</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="row g-0">
+                  <div class="row corner-text-otomatis text-center">Otomatis</div>
+                  <div class="row">
+                    <div class="col-md-4">
+                      <img src="./assets/img/armada/Honda_Brio_2020.png" class="card-img-top" alt="Avanza New 2024" />
+                    </div>
+                    <div class="col-md-8">
+                      <div class="card-body">
+                        <h5 class="card-title">Avanza 2016</h5>
+                        <div class="d-flex justify-content-between">
+                          <div>
+                            <i class="fas fa-car"></i> 5 Kursi<br />
+                            <i class="fas fa-suitcase"></i> 3 Koper<br />
+                          </div>
+                          <div>
+                            <i class="fas fa-shield-alt"></i> Asuransi<br />
+                            <i class="fas fa-user"></i> Pengemudi<br />
+                          </div>
+                          <div class="text-end">
+                            <p>Rp 300.000/Hari</p>
+                            <a href="#" class="btn btn-sm btn-warning rounded-5 w-75">Pilih</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- <div class="card">
+                <div class="row g-0">
+                  <div class="corner-text">Otomatis</div>
+                  <div class="col-md-4">
+                    <img src="./assets/img/armada/Honda_Brio_2020.png" class="card-img-top" alt="Avanza New 2024" />
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">Honda Brio 2020</h5>
+                      <div class="d-flex justify-content-between">
+                        <div>
+                          <i class="fas fa-car"></i> 5 Kursi<br />
+                          <i class="fas fa-suitcase"></i> 3 Koper<br />
+                        </div>
+                        <div>
+                          <i class="fas fa-shield-alt"></i> Asuransi<br />
+                          <i class="fas fa-user"></i> Pengemudi<br />
+                        </div>
+                        <div>
+                          <p>Rp 300.000</p>
+                          <a href="#" class="btn btn-primary">Pilih Pengemudi</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div> -->
+              <!-- <div class="card">
+                <div class="row g-0">
+                  <div class="corner-text">Manual</div>
+                  <div class="col-md-4">
+                    <img src="./assets/img/armada/Daihatsu_Sigra.png" class="card-img-top" alt="Avanza New 2024" />
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">Daihatsu Sigra 2022</h5>
+                      <div class="d-flex justify-content-between">
+                        <div>
+                          <i class="fas fa-car"></i> 6 Kursi<br />
+                          <i class="fas fa-suitcase"></i> 3 Koper<br />
+                        </div>
+                        <div>
+                          <i class="fas fa-shield-alt"></i> Asuransi<br />
+                          <i class="fas fa-user"></i> Pengemudi<br />
+                        </div>
+                        <div>
+                          <p>Rp 250.000</p>
+                          <a href="#" class="btn btn-primary">Pilih Pengemudi</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="row g-0">
+                  <div class="corner-text">Manual</div>
+                  <div class="col-md-4">
+                    <img src="./assets/img/armada/Toyota_Calva_2018.png" class="card-img-top" alt="Avanza New 2024" />
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">Toyota Calya 2018</h5>
+                      <div class="d-flex justify-content-between">
+                        <div>
+                          <i class="fas fa-car"></i> 6 Kursi<br />
+                          <i class="fas fa-suitcase"></i> 3 Koper<br />
+                        </div>
+                        <div>
+                          <i class="fas fa-shield-alt"></i> Asuransi<br />
+                          <i class="fas fa-user"></i> Pengemudi<br />
+                        </div>
+                        <p>Rp 250.000</p>
+                        <a href="#" class="btn btn-primary">Pilih Pengemudi</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div> -->
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ======= Footer ======= -->
+      <footer id="footer" class="footer">
+        <div class="container-footer">
+          <div class="row col-lg-12 mb-5">
+            <div class="col-lg-12 col-md-12 footer-info">
+              <a href="./" class="logo d-flex align-items-center">
+                <span><img src="assets/img/LogoRent.png" alt="logo" /></span>
+              </a>
+            </div>
+          </div>
+
+          <div class="row col-lg-12">
+            <div class="col-lg-4 col-md-12 footer-links text-center">
+              <h4>Hubungi Kami</h4>
+              <center>
+                <ul>
+                  <li><i class="bi bi-whatsapp fs-4"></i> 0234-09874111</li>
+                  <li>
+                    <i class="bi bi-envelope-fill fs-4"></i>
+                    mochamadzidan1@gmail.com
+                  </li>
+                </ul>
+              </center>
+            </div>
+
+            <div class="col-lg-4 col-6 footer-links text-center">
+              <h4>Pembayaran Melalui</h4>
+              <div class="d-flex flex-wrap">
+                <img class="p-2" src="./assets/img/logo_bank/bca.png" alt="BCA" />
+                <img class="p-2" src="./assets/img/logo_bank/bni.png" alt="BNI" />
+                <img class="p-2" src="./assets/img/logo_bank/bri.png" alt="BRI" />
+                <img class="p-2" src="./assets/img/logo_bank/dana.png" alt="Dana" />
+                <img class="p-2" src="./assets/img/logo_bank/mandiri.png" alt="Mandiri" />
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-6 footer-links text-center">
+              <h4>Ikuti Kami</h4>
+              <div class="social-links d-flex justify-content-center">
+                <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+                <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container pt-3">
+          <div class="copyright">
+            <strong><span>Z-Rental CAR</span></strong> &copy; 2023 - 2024. RoamRise All rights reserved.
+          </div>
+        </div>
+      </footer>
+      <!-- End Footer -->
+    </main>
+    <!-- End #main -->
+
+    <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+    <div id="preloader"></div>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
