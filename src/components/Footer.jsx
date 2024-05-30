@@ -1,4 +1,4 @@
-// import React from "react";
+import React from "react";
 
 const Footer = () => {
   return (
@@ -16,7 +16,7 @@ const Footer = () => {
             </div>
           </div>
           <div className='row col-lg-12'>
-            <div className='col-lg-4 col-md-12 footer-links text-center'>
+            <div className='col-lg-4 col-md-12 footer-links '>
               <h4>Hubungi Kami</h4>
               <center>
                 <ul>
@@ -29,7 +29,7 @@ const Footer = () => {
                 </ul>
               </center>
             </div>
-            <div className='col-lg-4 col-6 footer-links text-center'>
+            <div className='col-lg-4 col-6 footer-links '>
               <h4>Pembayaran Melalui</h4>
               <div className='d-flex flex-wrap'>
                 <img className='p-2' src='./assets/img/logo_bank/bca.png' alt='Bootstrap 5 Logo' />
@@ -39,9 +39,9 @@ const Footer = () => {
                 <img className='p-2' src='./assets/img/logo_bank/mandiri.png' alt='Bootstrap 5 Logo' />
               </div>
             </div>
-            <div className='col-lg-4 col-6 footer-links text-center'>
+            <div className='col-lg-4 col-6 footer-links '>
               <h4>Ikuti Kami</h4>
-              <div className='social-links d-flex justify-content-center'>
+              <div className='social-links d-flex '>
                 <a href='#' className='instagram'>
                   <i className='bi bi-instagram' />
                 </a>

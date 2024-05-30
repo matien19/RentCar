@@ -1,7 +1,5 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-
-import "../css/header.css";
 import "../css/tentangKami.css";
 
 const TentangKami = () => {
@@ -34,14 +32,12 @@ const TentangKami = () => {
           </div>
         </section>
         <section className='tagline' data-aos='fade-up' data-aos-delay={300}>
-          <center>
-            <div className='row'>
+         
+            <div className='SalamHangat' >
               <h1>Perjalanan Anda, Senyaman</h1>
-            </div>
-            <div className='row'>
               <h1>Rumah Sendiri Bersama Kami!</h1>
             </div>
-          </center>
+     
         </section>
       </main>
       <Footer />

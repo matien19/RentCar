@@ -30,9 +30,7 @@ const Armada = () => {
                         </div>
                       </div>
                     </p>
-                    <a href='#' className='btn btn-primary'>
-                      Pilih Pengemudi
-                    </a>
+                    
                   </div>
                 </div>
               </div>
@@ -55,9 +53,7 @@ const Armada = () => {
                         </div>
                       </div>
                     </p>
-                    <a href='#' className='btn btn-primary'>
-                      Pilih Pengemudi
-                    </a>
+                    
                   </div>
                 </div>
               </div>
@@ -80,9 +76,7 @@ const Armada = () => {
                         </div>
                       </div>
                     </p>
-                    <a href='#' className='btn btn-primary'>
-                      Pilih Pengemudi
-                    </a>
+                    
                   </div>
                 </div>
               </div>
@@ -108,9 +102,7 @@ const Armada = () => {
                         </div>
                       </div>
                     </p>
-                    <a href='#' className='btn btn-primary'>
-                      Pilih Pengemudi
-                    </a>
+                    
                   </div>
                 </div>
               </div>
@@ -133,9 +125,7 @@ const Armada = () => {
                         </div>
                       </div>
                     </p>
-                    <a href='#' className='btn btn-primary'>
-                      Pilih Pengemudi
-                    </a>
+                    
                   </div>
                 </div>
               </div>
@@ -158,9 +148,7 @@ const Armada = () => {
                         </div>
                       </div>
                     </p>
-                    <a href='#' className='btn btn-primary'>
-                      Pilih Pengemudi
-                    </a>
+                    
                   </div>
                 </div>
               </div>
@@ -186,9 +174,7 @@ const Armada = () => {
                         </div>
                       </div>
                     </p>
-                    <a href='#' className='btn btn-primary'>
-                      Pilih Pengemudi
-                    </a>
+                    
                   </div>
                 </div>
               </div>

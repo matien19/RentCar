@@ -9,7 +9,14 @@
   color: #fff;
   padding: 20px;
   font-weight: bold;
+  
 }
+
+.konten .title{
+  margin-left: 2px;
+
+}
+
 .banner .banner-fitur {
   color: #fff;
 

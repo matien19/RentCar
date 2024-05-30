@@ -41,7 +41,7 @@ const Kontak = () => {
               <img src='./assets/img/kontak/main.png' alt='Gambar Tambahan' className='img-fluid' data-aos='zoom-in' data-aos-delay={200} />
             </div>
             <div className='col-lg-6 col-md-8 p-5' data-aos='zoom-in' data-aos-delay={200}>
-              <h1>Ada yang bisa kami bantu?</h1>
+              <h1 className="ms-1">Ada yang bisa kami <br /><span>bantu?</span> </h1>
               <p>Tim kami tersedia 24/7 untuk menjawab pertanyaan atau memberikan bantuan apa pun yang Anda butuhkan.</p>
               <div className='form d-flex flex-column justify-content-between gap-2'>
                 <input type='text' name='nama' placeholder='Nama' />

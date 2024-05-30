@@ -1,7 +1,7 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
-import "../css/header.css";
+
 import "../css/home.css";
 
 const Home = () => {
@@ -12,7 +12,7 @@ const Home = () => {
         <section id='hero' className='hero d-flex align-items-center'>
           <div className='container pt-5'>
             <div className='row gy-4 d-flex justify-content-between'>
-              <div className='col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center'>
+              <div className='col-lg-6 order-2 order-lg-1 d-flex flex-column '>
                 <h2 data-aos='fade-up'>Wujudkan Impianmu Bersama Kami Yang Terpercaya!</h2>
                 <p data-aos='fade-up' data-aos-delay={100}>
                   Kami membuktikan pilihan mobil terbaik dan layanan ahli untuk pengalaman pelanggan terbaik
