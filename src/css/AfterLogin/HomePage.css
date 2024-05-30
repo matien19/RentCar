@@ -1,74 +1,47 @@
-:root{
-    --primary-color: #DCEEED;
+:root {
+  --primary-color: #dceeed;
 }
 
 /* HomePage */
 
-.HeroSection{
-    background-image: url(/assets/img/GambarHome.png);
-    width: 200vh;
-    height: 100vh;
-    background-size: cover;
-    margin-left: -50px;
-  
+.HeroSection {
+  background-image: url(/assets/img/GambarHome.png);
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
 }
 
 .HeroSection h1 {
-    color: white;
-    position: relative;
-    top: 200px;
-    left: 100px;
-    
+  color: white;
+  position: relative;
 }
 
 .HeroSection h5 {
-    color: white;
-    position: relative;
-    top: 200px;
-    left: 100px;
+  color: white;
+  position: relative;
 }
 
+/* .HeroSection .ButtonPesan {
+} */
 
-.HeroSection  .ButtonPesan {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    position: relative;
-    top: 210px;
-    right: 410px;
-  
-
+.HeroSection .ButtonPesan Button {
+  border-radius: 10px;
 }
 
-.HeroSection  .ButtonPesan Button{
-    border-radius: 10px;
-    
+.sectionHimbauan {
+  margin-top: 60px;
 }
 
-
-.sectionHimbauan{
-    margin-top: 60px;
+.sectionHimbauan h2 {
+  margin-top: 50px;
+  text-align: center;
 }
 
-.sectionHimbauan h2{
-    margin-top: 50px;
-    text-align: center;
-}
-
-.sectionHimbauan .gambarHimbauan{
-    display: flex;
-    justify-content: center;
-    gap: 97px;
-    margin-top: 48px;
-}
-
-section h1{
-    margin-left: 100px;
-}
-
-section h5{
-    margin-left: 100px;
+.sectionHimbauan .gambarHimbauan {
+  display: flex;
+  justify-content: center;
+  gap: 97px;
+  margin-top: 48px;
 }
 
 /* END HOMEPAGE */
-

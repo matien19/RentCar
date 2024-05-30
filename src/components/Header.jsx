@@ -22,7 +22,7 @@ const Header = () => {
                 <Link to='/armada'>Armada</Link>
               </li>
               <li>
-                <Link to='/tentang_kami'>Tentang Kami</Link>
+                <Link to='/tentangkami'>Tentang Kami</Link>
               </li>
               <li>
                 <Link to='/kontak'>hubungi Kami</Link>
