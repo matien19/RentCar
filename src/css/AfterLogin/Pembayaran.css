@@ -9,6 +9,10 @@
   font-weight: 500;
   font-size: 20px;
 }
+
+.bukti-pembayaran{
+  margin-top: -100px;
+}
 .bukti-pembayaran .upload-area {
   border: 3px dashed #ffffff;
   padding: 40px;

@@ -29,16 +29,7 @@ export const Armada = [
     driver: "Pengemudi",
     price: "Rp 400.000/Hari",
   },
-  {
-    type: "Manual",
-    image: "./assets/img/armada/Toyota_Avanza_2016.png",
-    title: "Avanza 2016",
-    seats: "6 Kursi",
-    luggage: "3 Koper",
-    insurance: "Asuransi",
-    driver: "Pengemudi",
-    price: "Rp 150.000/Hari",
-  },
+
   {
     type: "Otomatis",
     image: "./assets/img/armada/Honda_Brio_2020.png",
@@ -96,14 +87,7 @@ export const armadaData = [
     insurance: "Yes",
     driverIncluded: "Included",
   },
-  {
-    image: "./assets/img/armada//Toyota_Avanza_2016.png",
-    name: "Toyota Avanza 2016",
-    seats: 4,
-    luggage: 2,
-    insurance: "Yes",
-    driverIncluded: "Included",
-  },
+ 
   {
     image: "./assets/img/armada//Toyota_Calva_2018.png",
     name: "Toyota Calva 2018",

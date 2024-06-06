@@ -1,7 +1,27 @@
 import { Link } from "react-router-dom";
 import "../css/header.css";
 
+
 const Header = () => {
+
+  // const [name, setName] = useState("");
+  // const [token, setToken] = useState("");
+
+  // const refreshToken = async () => {
+  //   try {
+  //     const response = await axios.get("http://localhost:3000/token");
+  //     setToken(response.data.accessToken);
+  //     const decode = jwt_decode(response.data.accessToken);
+  //     console.log(decode);
+  //   } catch (err) {
+  //     console.log(err);
+  //   }
+  // };
+
+  // useEffect(() => {
+  //   refreshToken();
+  // }, []);
+
   return (
     <>
       <header id='header' className='header d-flex align-items-center fixed-top sticked'>
@@ -14,7 +34,7 @@ const Header = () => {
           <nav id='navbar' className='navbar'>
             <ul>
               <li>
-                <Link to='/' className='active'>
+                <Link to='/HomePage' className='active'>
                   Beranda
                 </Link>
               </li>
@@ -32,12 +52,13 @@ const Header = () => {
           <nav id='navbar2' className='navbar'>
             <ul>
               <li>
-                <Link to='/Sign'>Masuk</Link>
+                <Link to='/Sign'>Pesanan</Link>
               </li>
               <li>
-                <Link className='get-a-quote' to='/Sign'>
-                  Daftar
-                </Link>
+              <li>
+                <Link to=''>Angga A</Link>
+              </li>
+                
               </li>
             </ul>
           </nav>

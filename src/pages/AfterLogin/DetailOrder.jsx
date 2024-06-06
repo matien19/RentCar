@@ -10,7 +10,7 @@ const Order = () => {
       <Header />
       <main id='main'>
         <section className='detail'>
-          <div className='container'>
+          <div className='container mt-5'>
             <div className='row mb-12'>
               <div className='col-md-4'>
                 <div className='card' data-aos='fade-up' data-aos-delay={100}>
@@ -23,10 +23,10 @@ const Order = () => {
                         <i className='fas fa-car' /> Kursi: 4<br />
                         <i className='fas fa-suitcase' /> Koper: 2<br />
                       </div>
-                      <div>
-                        <i className='fas fa-shield-alt' /> Asuransi: Yes
+                      <div className="me-5">
+                        <i className='fas fa-shield-alt ' /> Asuransi
                         <br />
-                        <i className='fas fa-user' /> Pengemudi: Included
+                        <i className='fas fa-user' /> Pengemudi
                         <br />
                       </div>
                     </div>
@@ -44,7 +44,7 @@ const Order = () => {
                         <h4>Harga:</h4>
                         <p className='price'>Rp 500.000</p>
                       </div>
-                      <a href='#' className='btn btn-md btn-warning rounded-5 w-25'>
+                      <a href='/Detail' className='btn btn-md btn-warning rounded-5 w-25'>
                         Lanjut Pemesanan
                       </a>
                     </div>
@@ -71,21 +71,24 @@ const Order = () => {
                 </div>
               </div>
 
-              <div className='text-center fw-bold' data-aos='fade-up' data-aos-delay={100}>
+
+
+
+              <div className='text-center fw-bold mt-5' data-aos='fade-up' data-aos-delay={100}>
                 <h2>Informasi Pengemudi</h2>
               </div>
-              <div className='row mt-12'>
+              <div className='row mt-12 mt-3'>
                 <div className='col-md-3'>
                   <div className='card rounded-card' data-aos='fade-up' data-aos-delay={100}>
                     <div className='card-body d-flex align-items-center'>
-                      <img src='assets/img/detailorder/sopir1.png' className='rounded-circle' alt='Nama Petugas 1' style={{ width: 80, height: 80 }} />
+                      <img src='assets/img/detailorder/sopir1.png' className='rounded' alt='Nama Petugas 1' style={{ width: 80, height: 80 }} />
                       <div className='ml-3'>
                         <h6 className='card-title'>Afrizal Indra Prata</h6>
                         <p className='card-text'>Zidan adalah orang yang menyenangkan dan mudah bergaul. Dia selalu wangi dan rapi, dan Dia adalah orang yang disiplin dan memiliki prinsip yang kuat</p>
                         <p className='card-text'>
                           <i className='fab fa-whatsapp' /> 08123456789
-                          <br />
-                          <i className='fab fa-instagram' /> @afrizalindra
+                          
+                          <i className='fab fa-instagram ms-3' /> @afrizalindra
                         </p>
                       </div>
                     </div>
@@ -100,8 +103,8 @@ const Order = () => {
                         <p className='card-text'>Zidan adalah orang yang menyenangkan dan mudah bergaul. Dia selalu wangi dan rapi, dan Dia adalah orang yang disiplin dan memiliki prinsip yang kuat</p>
                         <p className='card-text'>
                           <i className='fab fa-whatsapp' /> 08123456789
-                          <br />
-                          <i className='fab fa-instagram' /> @afrizalindra
+                         
+                          <i className='fab fa-instagram ms-3' /> @afrizalindra
                         </p>
                       </div>
                     </div>
@@ -116,8 +119,8 @@ const Order = () => {
                         <p className='card-text'>Zidan adalah orang yang menyenangkan dan mudah bergaul. Dia selalu wangi dan rapi, dan Dia adalah orang yang disiplin dan memiliki prinsip yang kuat</p>
                         <p className='card-text'>
                           <i className='fab fa-whatsapp' /> 08123456789
-                          <br />
-                          <i className='fab fa-instagram' /> @afrizalindra
+                         
+                          <i className='fab fa-instagram ms-3' /> @afrizalindra
                         </p>
                       </div>
                     </div>
@@ -132,8 +135,8 @@ const Order = () => {
                         <p className='card-text'>Zidan adalah orang yang menyenangkan dan mudah bergaul. Dia selalu wangi dan rapi, dan Dia adalah orang yang disiplin dan memiliki prinsip yang kuat</p>
                         <p className='card-text'>
                           <i className='fab fa-whatsapp' /> 08123456789
-                          <br />
-                          <i className='fab fa-instagram' /> @afrizalindra
+                          
+                          <i className='fab fa-instagram ms-3' /> @afrizalindra
                         </p>
                       </div>
                     </div>
@@ -142,28 +145,31 @@ const Order = () => {
               </div>
             </div>
             <br />
-            <div className='text-center fw-bold' data-aos='fade-up' data-aos-delay={100}>
+
+
+
+            <div className='text-center fw-bold mt-5' data-aos='fade-up' data-aos-delay={100}>
               <h2>Informasi Armada</h2>
             </div>
-            <div className='row mt-12'>
+            <div className='row mt-3 ' >
               <div className='col-md-3'>
                 <div className='card' data-aos='fade-up' data-aos-delay={100}>
-                  <img src='assets/img/detailorder/setir.png' className='img-fluid' alt='Image 1' />
+                  <img src='assets/img/detailorder/setir.png' className='img-fluid' alt='Image 1'  style={{ width: 400, height: 170 }} />
                 </div>
               </div>
               <div className='col-md-3'>
                 <div className='card' data-aos='fade-up' data-aos-delay={100}>
-                  <img src='assets/img/detailorder/mesin.png' className='img-fluid' alt='Image 2' />
+                  <img src='assets/img/detailorder/mesin.png' className='img-fluid' alt='Image 2' style={{ width: 400, height: 170 }} />
                 </div>
               </div>
               <div className='col-md-3'>
                 <div className='card' data-aos='fade-up' data-aos-delay={100}>
-                  <img src='assets/img/detailorder/kursi.png' className='img-fluid' alt='Image 3' />
+                  <img src='assets/img/detailorder/kursi.png' className='img-fluid' alt='Image 3'style={{ width: 400, height: 170 }} />
                 </div>
               </div>
               <div className='col-md-3'>
                 <div className='card' data-aos='fade-up' data-aos-delay={100}>
-                  <img src='assets/img/detailorder/bagasi.png' className='img-fluid' alt='Image 4' />
+                  <img src='assets/img/detailorder/bagasi.png' className='img-fluid' alt='Image 4' style={{ width: 400, height: 170 }}/>
                 </div>
               </div>
             </div>

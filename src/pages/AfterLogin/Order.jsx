@@ -12,7 +12,7 @@ const Order = () => {
         <section className='order '>
           <div className='container'>
             <div className='row mb-12'>
-              <div className='col-md-3'>
+              <div className='col-md-3 mt-5'>
                 <table className='table'>
                   <thead>
                     <tr>
@@ -41,7 +41,8 @@ const Order = () => {
                   </tbody>
                 </table>
               </div>
-              <div className='col-md-9 d-flex flex-column gap-3'>
+
+              <div className='col-md-9 d-flex flex-column gap-3 mt-5'>
                 {Armada.map((car, index) => (
                   <div className='card' key={index}>
                     <div className='row g-0'>
@@ -68,7 +69,7 @@ const Order = () => {
                               </div>
                               <div className='text-end'>
                                 <p>{car.price}</p>
-                                <a href='#' className='btn btn-sm btn-warning rounded-5 w-75'>
+                                <a href='/DetailOrder' className='btn btn-sm btn-warning rounded-5 w-75'>
                                   Pilih
                                 </a>
                               </div>

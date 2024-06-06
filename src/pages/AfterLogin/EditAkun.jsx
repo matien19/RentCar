@@ -1,5 +1,6 @@
 import "../../css/AfterLogin/editAkun.css";
 
+
 const EditAkun = () => {
   return (
     <>

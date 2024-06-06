@@ -2,10 +2,17 @@
 import Button from "react-bootstrap/Button";
 import Carousel from "../../components/Carousel";
 import "../../css/AfterLogin/HomePage.css";
-import Header from "../../components/Header";
+import Header from "../../components/NavBarAfterLogin";
 import Footer from "../../components/Footer";
+import { useNavigate } from "react-router-dom";
 
 function HomePage() {
+
+  const history = useNavigate ()
+  const Pengemudi = () => {
+    history('/Order')
+  }
+
   return (
     <>
       <Header />
@@ -23,12 +30,12 @@ function HomePage() {
               </h5>
             </div>
             <div className='ButtonPesan'>
-              <Button variant='primary' size='lg'>
+              <Button variant='primary' onClick={Pengemudi} size='lg'>
                 Pesan Dengan Pengemudi
               </Button>{" "}
-              <Button variant='primary' size='lg'>
+              <Button variant='primary'   size='lg'>
                 Pesan Tanpa Pengemudi
-              </Button>{" "}
+              </Button>
             </div>
           </div>
         </div>
@@ -43,9 +50,9 @@ function HomePage() {
         </div>
       </section>
 
-      <section>
-        <h1>Destinasi Wisata Kuningan</h1>
-        <h5>Wisata Terbaru</h5>
+      <section className="sectionWisata">
+        <h1 className="textWisata">Destinasi Wisata Kuningan</h1>
+        <h5 className="textWisata">Wisata Terbaru</h5>
         <div>
           <Carousel />
         </div>

@@ -2,7 +2,6 @@ import Home from "./pages/Home";
 import Kontak from "./pages/Kontak";
 import Armada from "./pages/Armada";
 import TentangKami from "./pages/TentangKami";
-import LoginPage from "./pages/LoginPage";
 import HomePage from "./pages/AfterLogin/HomePage";
 import DetailPesanan from "./pages/AfterLogin/DetailPesanan";
 import MetodePembayaran from "./pages/AfterLogin/MetodePembayaran";
@@ -14,6 +13,7 @@ import EditAkun from "./pages/AfterLogin/EditAkun";
 import Order from "./pages/AfterLogin/Order";
 import Pembayaran from "./pages/AfterLogin/Pembayaran";
 import DetailOrder from "./pages/AfterLogin/DetailOrder";
+import RegisterPage from "./pages/RegisterPage"
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
@@ -25,8 +25,8 @@ function App() {
           <Route path='/' Component={Home} />
           <Route path='/Kontak' Component={Kontak} />
           <Route path='/Armada' Component={Armada} />
-          <Route path='/TentangKami' Component={TentangKami} />
-          <Route path='/Login' Component={LoginPage} />
+          <Route path='/TentangKami' Component={TentangKami} />        
+          <Route path='/Sign' Component={RegisterPage} />
           <Route path='/HomePage' Component={HomePage} />
           <Route path='/Detail' Component={DetailPesanan} />
           <Route path='/MetodePembayaran' Component={MetodePembayaran} />

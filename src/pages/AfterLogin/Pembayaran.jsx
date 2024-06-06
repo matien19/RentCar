@@ -8,7 +8,7 @@ const Pembayaran = () => {
     <>
       <Header />
       <main id='main'>
-        <section className='info-checkout container'>
+        <section className='info-checkout container mt-5 '>
           <h1>Informasi Pembayaran</h1>
           <div className='card p-2 mt-3'>
             <div className='card-body'>
@@ -23,7 +23,7 @@ const Pembayaran = () => {
             </div>
           </div>
         </section>
-        <section className='bukti-pembayaran container'>
+        <section className='bukti-pembayaran container '>
           <div className='card'>
             <div className='card-body'>
               <h3>Kirim bukti pembayaran</h3>
