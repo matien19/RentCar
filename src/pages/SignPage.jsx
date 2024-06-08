@@ -1,39 +1,39 @@
 import { useState, useEffect } from "react";
+import Validation  from "./LoginValidation";
+import "../css/login.css";
 import axios from 'axios'
 import { useNavigate } from "react-router-dom";
-import "../css/login.css";
-import Validation  from "./LoginValidation";
+
+
+
+
 
 function Login() {
   const [signUpButton, setSignUpButton] = useState(null);
   const [signInButton, setSignInButton] = useState(null);
   const [container, setContainer] = useState(null);
 
-  const[name, setName] = useState('')
-  const[email, setEmail] = useState('')
-  const[password, setPassword] = useState('')
-  const[nomor_hp, setNomor_hp] = useState('')
-
-  const [errors , setErrors] = useState({})
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+  const [confPassword, setConfPassword] = useState('')
 
 
   const history = useNavigate ()
   const [msg , setMsg] = useState('')
 
 
-
-  const auth = async(e) =>{
-    setErrors(Validation({email, password,}))
+  const Regis = async(e) =>{
     e.preventDefault()
 
     try{
-      await axios.post('http://localhost:3000/login',{
-       
+      await axios.post('http://localhost:3000/Register',{
+        name: name,
         email: email,
         password: password,
-        
+        confPassword: confPassword
       })
-      history('/HomePage')
+      history.push('/HomePage')
     }catch(error){
       if(error.response){
         setMsg(error.response.data,msg)
@@ -42,33 +42,7 @@ function Login() {
   }
 
 
- 
- 
 
-
-  const daftar = async(e) =>{
-
-    e.preventDefault()
-    try{
-      await axios.post('http://localhost:3000/register',{
-       name: name,
-       email: email,
-       password: password,
-       nomor_hp: nomor_hp
-        
-      })
-      history('/Sign')
-    }catch(error){
-      if(error.response){
-        console.log(error.response.data,msg)
-      }
-    }
-    console.log(name)
-    console.log(email)
-    console.log(password)
-    console.log(nomor_hp)
-    
-  }
 
   useEffect(() => {
     setSignUpButton(document.getElementById("signUp"));
@@ -99,8 +73,8 @@ function Login() {
     <div className='container-login'>
       <div className='container' id='container'>
         <div className='form-container sign-up-container'>
-
-          <form action='' onSubmit={daftar}> 
+          <p className="">{msg}</p>
+          <form action='' onSubmit={Regis}>
             <h1>Buat Akun</h1>
             <div className='social-container'>
               <a href='#' className='social'>
@@ -110,50 +84,22 @@ function Login() {
                 <i className='fab fa-google-plus-g' />
               </a>
             </div>
-
             <span>atau gunakan email Anda untuk pendaftaran</span>
-
-            <input type="text"  placeholder="Masukan username" value={name} onChange={(e) => setName(e.target.value)}/>
-          
-            <input type='email' placeholder='Email'  value={email} onChange={(e) => setEmail(e.target.value)} />
-           
-            <input type='password' placeholder='Kata sandi'  value={password} onChange={(e) => setPassword(e.target.value)} />
-       
-            <input type='text' placeholder='masukan nomer hp'  value={nomor_hp} onChange={(e) => setNomor_hp(e.target.value)} />
-            
-            
-            <div>
+            <input type='text' placeholder='Nama'  name="name"  onChange={(e) => setName(e.target.value)} value={name}/>
+            {errors.name && <span className="text-danger">{errors.name} </span>}
+            <input type='email' placeholder='Email' name="email"  onChange={(e) => setEmail(e.target.value)} value={email}/>
+            {errors.email && <span className="text-danger">{errors.email} </span>}
+            <input type='password' placeholder='Kata sandi' name="password"  onChange={(e) => setPassword(e.target.value)} value={password}/>
+            {errors.password && <span className="text-danger">{errors.password} </span>}
+            <input type='password' placeholder='Masukan Ulang Kata sandi' onChange={(e) => setConfPassword(e.target.value)} value={confPassword}/>
+            {errors.password && <span className="text-danger">{errors.password} </span>}
             <button type="submit">Daftar</button>
-            </div>
-          
           </form>
         </div>
 
 
 
         
-        <div className='form-container sign-in-container'>
-          <form  onSubmit={auth}> 
-            <h1>Masuk ke Z-Rental Car</h1>
-            <div className='social-container'>
-              <a href='#' className='social'>
-                <i className='fab fa-facebook-f' />
-              </a>
-              <a href='#' className='social'>
-                <i className='fab fa-google-plus-g' />
-              </a>
-            </div>
-            <span>atau gunakan email Anda untuk masuk</span>
-            <input type='email' placeholder='Email' name='email'value={email} onChange={(e) => setEmail(e.target.value)} />
-            {errors.email && <span className="text-danger">{errors.email} </span>}
-
-            <input type='password' placeholder='Kata sandi' name="password" value={password} onChange={(e) => setPassword(e.target.value)} />
-            {errors.password && <span className="text-danger">{errors.password} </span>}
-            <a href='#'>Lupa kata sandi?</a>
-            <button type="submit">Masuk</button>
-          </form>
-        </div>
-
 
         <div className='overlay-container'>
           <div className='overlay'>

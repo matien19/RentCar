@@ -1,26 +1,31 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "../css/header.css";
+import axios from "axios";
+// import {jwtDecode} from "jwt-decode";
+import { useState, useEffect } from "react";
 
 
 const Header = () => {
 
-  // const [name, setName] = useState("");
-  // const [token, setToken] = useState("");
 
-  // const refreshToken = async () => {
-  //   try {
-  //     const response = await axios.get("http://localhost:3000/token");
-  //     setToken(response.data.accessToken);
-  //     const decode = jwt_decode(response.data.accessToken);
-  //     console.log(decode);
-  //   } catch (err) {
-  //     console.log(err);
-  //   }
-  // };
+  const [users, setUsers] = useState([]);
 
-  // useEffect(() => {
-  //   refreshToken();
-  // }, []);
+  useEffect(() => {
+    // Fungsi untuk mendapatkan data users dari server
+    const fetchUsers = async () => {
+      try {
+        const response = await axios.get('http://localhost:3000/users'); 
+        setUsers(response.data);
+        console.log(response.data);
+      } catch (error) {
+        console.error('Error fetching users:', error);
+      }
+    };
+
+    fetchUsers();
+  }, []);
+
+ 
 
   return (
     <>
@@ -55,9 +60,15 @@ const Header = () => {
                 <Link to='/Sign'>Pesanan</Link>
               </li>
               <li>
-              <li>
-                <Link to=''>Angga A</Link>
-              </li>
+
+                <ul>
+                {users.map((user, index) => (
+          <li key={index}>{user.name}</li>
+          ))}
+
+                </ul>
+              
+              
                 
               </li>
             </ul>

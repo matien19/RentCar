@@ -1,20 +1,21 @@
 import { useState, useEffect } from "react";
+import Validation  from "./LoginValidation";
+import "../css/login.css";
 import axios from 'axios'
 import { useNavigate } from "react-router-dom";
-import "../css/login.css";
-import Validation  from "./LoginValidation";
 
 function Login() {
   const [signUpButton, setSignUpButton] = useState(null);
   const [signInButton, setSignInButton] = useState(null);
   const [container, setContainer] = useState(null);
-
-  const[name, setName] = useState('')
-  const[email, setEmail] = useState('')
-  const[password, setPassword] = useState('')
-  const[nomor_hp, setNomor_hp] = useState('')
-
+  const navigate = useNavigate ()
   const [errors , setErrors] = useState({})
+
+
+
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+  
 
 
   const history = useNavigate ()
@@ -23,7 +24,6 @@ function Login() {
 
 
   const auth = async(e) =>{
-    setErrors(Validation({email, password,}))
     e.preventDefault()
 
     try{
@@ -43,32 +43,7 @@ function Login() {
 
 
  
- 
-
-
-  const daftar = async(e) =>{
-
-    e.preventDefault()
-    try{
-      await axios.post('http://localhost:3000/register',{
-       name: name,
-       email: email,
-       password: password,
-       nomor_hp: nomor_hp
-        
-      })
-      history('/Sign')
-    }catch(error){
-      if(error.response){
-        console.log(error.response.data,msg)
-      }
-    }
-    console.log(name)
-    console.log(email)
-    console.log(password)
-    console.log(nomor_hp)
-    
-  }
+  
 
   useEffect(() => {
     setSignUpButton(document.getElementById("signUp"));
@@ -98,42 +73,12 @@ function Login() {
   return (
     <div className='container-login'>
       <div className='container' id='container'>
-        <div className='form-container sign-up-container'>
-
-          <form action='' onSubmit={daftar}> 
-            <h1>Buat Akun</h1>
-            <div className='social-container'>
-              <a href='#' className='social'>
-                <i className='fab fa-facebook-f' />
-              </a>
-              <a href='#' className='social'>
-                <i className='fab fa-google-plus-g' />
-              </a>
-            </div>
-
-            <span>atau gunakan email Anda untuk pendaftaran</span>
-
-            <input type="text"  placeholder="Masukan username" value={name} onChange={(e) => setName(e.target.value)}/>
-          
-            <input type='email' placeholder='Email'  value={email} onChange={(e) => setEmail(e.target.value)} />
-           
-            <input type='password' placeholder='Kata sandi'  value={password} onChange={(e) => setPassword(e.target.value)} />
-       
-            <input type='text' placeholder='masukan nomer hp'  value={nomor_hp} onChange={(e) => setNomor_hp(e.target.value)} />
-            
-            
-            <div>
-            <button type="submit">Daftar</button>
-            </div>
-          
-          </form>
-        </div>
-
-
-
         
+
+
         <div className='form-container sign-in-container'>
-          <form  onSubmit={auth}> 
+
+          <form action='#' onSubmit={auth}>
             <h1>Masuk ke Z-Rental Car</h1>
             <div className='social-container'>
               <a href='#' className='social'>
@@ -153,7 +98,6 @@ function Login() {
             <button type="submit">Masuk</button>
           </form>
         </div>
-
 
         <div className='overlay-container'>
           <div className='overlay'>
