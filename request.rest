@@ -1,30 +1,36 @@
-GET http://localhost:3000/users
-Authorization: Bearer
-eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsIm5hbWUiOiJHaWFuIiwiZW1haWwiOiJHaWFAZ21haWwuY29tIiwiaWF0IjoxNzE3Njc0OTQ3LCJleHAiOjE3MTc2NzUwNjd9.aDQPQ_aY82Kxwf9En5dBccpgESkgLXmwg-bjsqScaJ0
-###
 
-POST http://localhost:3000/users
+###
+GET http://localhost:5000/Drivers
+
+###
+GET http://localhost:5000/Armadas
+
+###
+get http://localhost:5000/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsIm5hbWUiOiJtYXRpZW4iLCJlbWFpbCI6Im1hdGllbkBnbWFpbC5jb20iLCJub1RlbHAiOiIwODc2NzIzMjMyMzI3IiwiaWF0IjoxNzE3OTYzNDc5LCJleHAiOjE3MTgwNDk4Nzl9.0mCgkidLU59W78lRxsg5Rl94DPuF86uGYAFnPsh0LKA
+
+###
+POST  http://localhost:5000/register
 Content-Type: application/json
 
 {
-    "name" : "Akuww",
-    "email" : "Akuww@gmail.com",
-    "password" : "Aku123456",
-    "confpassword" : "Aku123456"
+    "name": "dd",
+    "email": "dd@gmail.com",
+    "password": "12345",
+    "no_telp": "098192328138"
 }
 
 ###
-POST http://localhost:3000/login
+post http://localhost:5000/login
 Content-Type: application/json
 
 {
-    "email" : "Gia@gmail.com",
-    "password" : "AAA123456"
+    "email": "matien@gmail.com",
+    "password": "12345678"
 }
 
 ###
-GET http://localhost:3000/token
+get http://localhost:5000/token
 
-
-####
-DELETE http://localhost:3000/logout
+###
+delete http://localhost:5000/logout
