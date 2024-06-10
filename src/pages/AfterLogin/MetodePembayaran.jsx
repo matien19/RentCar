@@ -1,7 +1,6 @@
-import React from "react";
 import Form from "react-bootstrap/Form";
 import "../../css/AfterLogin/MetodePembayaran.css";
-import Header from "../../components/Header";
+import Header from "../../components/NavBarAfterLogin";
 import Footer from "../../components/Footer";
 import Button from "react-bootstrap/Button";
 
@@ -36,30 +35,30 @@ function MetodePembayaran() {
   return (
     <>
       <Header />
-      <div className="SectionContainer">
-        <div className="gridSatu">
-          <div className="metode">
-            <div className="Teks">
+      <div className='SectionContainer'>
+        <div className='gridSatu'>
+          <div className='metode'>
+            <div className='Teks'>
               <h4>Metode Pembayaran</h4>
               <br />
 
-              <div className="virtualAccount">
+              <div className='virtualAccount'>
                 <h6>Virtual Account</h6>
               </div>
             </div>
-            <div className="CheckboxBank">
+            <div className='CheckboxBank'>
               <h4>Virtual Account</h4>
               <br />
 
               <Form>
                 {bank.map((type) => (
-                  <div key={`default-${type}`} className="mb-3 d-flex">
+                  <div key={`default-${type}`} className='mb-3 d-flex'>
                     <Form.Check // prettier-ignore
                       type={"checkbox"}
                       id={`${type}`}
                     />
 
-                    <img src={type.imgBank} alt="" className="ms-3" />
+                    <img src={type.imgBank} alt='' className='ms-3' />
                   </div>
                 ))}
               </Form>
@@ -67,53 +66,53 @@ function MetodePembayaran() {
           </div>
         </div>
 
-        <div className="formDetailPesanan">
-          <div className="formMerkMobil">
+        <div className='formDetailPesanan'>
+          <div className='formMerkMobil'>
             <h2>TOYOTA NEW INNOVA</h2>
           </div>
 
-          <div className="FormPesanan">
+          <div className='FormPesanan'>
             <div>
-              <img src="/assets/img/DetailPesanan/avanzaDetailPesanan.png" alt="" />
+              <img src='/assets/img/DetailPesanan/avanzaDetailPesanan.png' alt='' />
             </div>
 
-            <div className="dataInteriorMobil">
-              <div className="kursi">
-                <div className="icon">
-                  <img src="/assets/img/DetailPesanan/kursi.png" alt="" />
+            <div className='dataInteriorMobil'>
+              <div className='kursi'>
+                <div className='icon'>
+                  <img src='/assets/img/DetailPesanan/kursi.png' alt='' />
                 </div>
 
-                <div className="title">
+                <div className='title'>
                   <h5>6 kursi </h5>
                 </div>
               </div>
 
-              <div className="asuransi">
-                <div className="icon">
-                  <img src="/assets/img/DetailPesanan/asuransi.png" alt="" />
+              <div className='asuransi'>
+                <div className='icon'>
+                  <img src='/assets/img/DetailPesanan/asuransi.png' alt='' />
                 </div>
 
-                <div className="title">
+                <div className='title'>
                   <h5>Asuransi </h5>
                 </div>
               </div>
 
-              <div className="koper">
-                <div className="icon">
-                  <img src="/assets/img/DetailPesanan/koper.png" alt="" />
+              <div className='koper'>
+                <div className='icon'>
+                  <img src='/assets/img/DetailPesanan/koper.png' alt='' />
                 </div>
 
-                <div className="title">
+                <div className='title'>
                   <h5>3 koper </h5>
                 </div>
               </div>
 
-              <div className="pengemudi">
-                <div className="icon">
-                  <img src="/assets/img/DetailPesanan/pengemudi.png" alt="" />
+              <div className='pengemudi'>
+                <div className='icon'>
+                  <img src='/assets/img/DetailPesanan/pengemudi.png' alt='' />
                 </div>
 
-                <div className="title">
+                <div className='title'>
                   <h5>Pengemudi </h5>
                 </div>
               </div>
@@ -122,31 +121,31 @@ function MetodePembayaran() {
 
           <hr />
 
-          <div className="FormPesanan">
-            <div className="dataHarga">
+          <div className='FormPesanan'>
+            <div className='dataHarga'>
               <h5>Harga</h5>
               <h5>TOYOTA NEW INOVA</h5>
               <h5>1 HARI</h5>
             </div>
 
-            <div className="hargaSewa">
+            <div className='hargaSewa'>
               <h5>Rp. 5000.000</h5>
             </div>
           </div>
 
           <hr />
 
-          <div className="FormPesanan">
-            <div className="dataPembayaran">
+          <div className='FormPesanan'>
+            <div className='dataPembayaran'>
               <h5>Total Pembayaran</h5>
             </div>
-            <div className="hargaSewa">
+            <div className='hargaSewa'>
               <h5>Rp. 5000.000</h5>
             </div>
           </div>
-          
-          <div className="ButtonMetodePembayaran">
-            <Button variant="primary">Primary</Button>{" "}
+
+          <div className='ButtonMetodePembayaran'>
+            <Button variant='primary'>Primary</Button>{" "}
           </div>
         </div>
       </div>

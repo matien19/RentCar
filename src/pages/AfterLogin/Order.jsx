@@ -1,10 +1,25 @@
+import { useEffect, useState } from "react";
 import Footer from "../../components/Footer";
-import Header from "../../components/Header";
-import { Armada } from "../../data/data";
+import Header from "../../components/NavBarAfterLogin";
+
+import { Link } from "react-router-dom";
+
+import axios from "axios";
 
 import "../../css/AfterLogin/order.css";
 
 const Order = () => {
+  const [Armadas, setArmadas] = useState([]);
+
+  useEffect(() => {
+    getArmadas();
+  }, []);
+
+  const getArmadas = async () => {
+    const response = await axios.get("http://localhost:5000/Armadas");
+    setArmadas(response.data);
+  };
+
   return (
     <>
       <Header />
@@ -43,8 +58,8 @@ const Order = () => {
               </div>
 
               <div className='col-md-9 d-flex flex-column gap-3 mt-5'>
-                {Armada.map((car, index) => (
-                  <div className='card' key={index}>
+                {Armadas.map((car) => (
+                  <div className='card' key={car.id}>
                     <div className='row g-0'>
                       <div className={"corner-text-" + car.type.toLowerCase() + " text-center"}>{car.type}</div>
                       <div className='row'>
@@ -53,12 +68,12 @@ const Order = () => {
                         </div>
                         <div className='col-md-8'>
                           <div className='card-body'>
-                            <h5 className='card-title'>{car.title}</h5>
+                            <h5 className='card-title'>{car.name} </h5>
                             <div className='d-flex justify-content-between'>
                               <div>
-                                <i className='fas fa-car' /> {car.seats}
+                                <i className='fas fa-car' /> {car.seats} kursi
                                 <br />
-                                <i className='fas fa-suitcase' /> {car.luggage}
+                                <i className='fas fa-suitcase' /> {car.luggage} koper
                                 <br />
                               </div>
                               <div>
@@ -68,10 +83,10 @@ const Order = () => {
                                 <br />
                               </div>
                               <div className='text-end'>
-                                <p>{car.price}</p>
-                                <a href='/DetailOrder' className='btn btn-sm btn-warning rounded-5 w-75'>
+                                <p>Rp {car.price}/Hari</p>
+                                <Link to={`/order/${car.id}`} className='btn btn-sm btn-warning rounded-5 w-75'>
                                   Pilih
-                                </a>
+                                </Link>
                               </div>
                             </div>
                           </div>

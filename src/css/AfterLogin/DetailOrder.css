@@ -42,3 +42,16 @@
 .rounded-card .card-text {
   font-size: 10px;
 }
+
+.detail input {
+  background-color: #F5F7F2;
+  border: none;
+  padding: 8px 15px;
+  margin: 8px 0;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.detail select {
+  color: #fff;
+}

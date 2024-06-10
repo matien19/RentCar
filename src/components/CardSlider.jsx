@@ -1,5 +1,6 @@
 import React from 'react'
 import {Card} from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 
 const  CardSlider = props => {
@@ -11,7 +12,7 @@ const  CardSlider = props => {
       </div>
 
       <Card.Body className='text-start text-dark'>
-        <Card.Title>{Title}</Card.Title>
+        <Card.Title><Link to="/PondokCai">{Title} </Link></Card.Title>
         <Card.Text>{Text}</Card.Text>
       </Card.Body>
   </Card>

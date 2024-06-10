@@ -7,11 +7,10 @@ import Footer from "../../components/Footer";
 import { useNavigate } from "react-router-dom";
 
 function HomePage() {
-
-  const history = useNavigate ()
+  const history = useNavigate();
   const Pengemudi = () => {
-    history('/Order')
-  }
+    history("/Order");
+  };
 
   return (
     <>
@@ -33,7 +32,7 @@ function HomePage() {
               <Button variant='primary' onClick={Pengemudi} size='lg'>
                 Pesan Dengan Pengemudi
               </Button>{" "}
-              <Button variant='primary'   size='lg'>
+              <Button variant='primary' size='lg'>
                 Pesan Tanpa Pengemudi
               </Button>
             </div>
@@ -50,9 +49,9 @@ function HomePage() {
         </div>
       </section>
 
-      <section className="sectionWisata">
-        <h1 className="textWisata">Destinasi Wisata Kuningan</h1>
-        <h5 className="textWisata">Wisata Terbaru</h5>
+      <section className='sectionWisata'>
+        <h1 className='textWisata'>Destinasi Wisata Kuningan</h1>
+        <h5 className='textWisata'>Wisata Terbaru</h5>
         <div>
           <Carousel />
         </div>

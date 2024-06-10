@@ -1,74 +1,58 @@
 import { useState, useEffect } from "react";
-import axios from 'axios'
+import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import "../css/login.css";
-import Validation  from "./LoginValidation";
+import Validation from "./LoginValidation";
 
 function Login() {
   const [signUpButton, setSignUpButton] = useState(null);
   const [signInButton, setSignInButton] = useState(null);
   const [container, setContainer] = useState(null);
 
-  const[name, setName] = useState('')
-  const[email, setEmail] = useState('')
-  const[password, setPassword] = useState('')
-  const[nomor_hp, setNomor_hp] = useState('')
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [no_telp, setNomor_hp] = useState("");
 
-  const [errors , setErrors] = useState({})
+  const [errors, setErrors] = useState({});
 
+  const history = useNavigate();
+  const [msg, setMsg] = useState("");
 
-  const history = useNavigate ()
-  const [msg , setMsg] = useState('')
+  const auth = async (e) => {
+    setErrors(Validation({ email, password }));
+    e.preventDefault();
 
-
-
-  const auth = async(e) =>{
-    setErrors(Validation({email, password,}))
-    e.preventDefault()
-
-    try{
-      await axios.post('http://localhost:3000/login',{
-       
+    try {
+      await axios.post("http://localhost:5000/login", {
         email: email,
         password: password,
-        
-      })
-      history('/HomePage')
-    }catch(error){
-      if(error.response){
-        setMsg(error.response.data,msg)
+      });
+
+      history("/HomePage");
+    } catch (error) {
+      if (error.response) {
+        setMsg(error.response.data.msg);
       }
     }
-  }
+  };
 
-
- 
- 
-
-
-  const daftar = async(e) =>{
-
-    e.preventDefault()
-    try{
-      await axios.post('http://localhost:3000/register',{
-       name: name,
-       email: email,
-       password: password,
-       nomor_hp: nomor_hp
-        
-      })
-      history('/Sign')
-    }catch(error){
-      if(error.response){
-        console.log(error.response.data,msg)
+  const daftar = async (e) => {
+    e.preventDefault();
+    try {
+      await axios.post("http://localhost:5000/register", {
+        name: name,
+        email: email,
+        password: password,
+        no_telp: no_telp,
+      });
+      setMsg("Daftar Akun telah sukses");
+    } catch (error) {
+      if (error.response) {
+        setMsg(error.response.data.msg);
       }
     }
-    console.log(name)
-    console.log(email)
-    console.log(password)
-    console.log(nomor_hp)
-    
-  }
+  };
 
   useEffect(() => {
     setSignUpButton(document.getElementById("signUp"));
@@ -97,11 +81,13 @@ function Login() {
 
   return (
     <div className='container-login'>
+      <span className='text-danger'>{msg} </span>
+
       <div className='container' id='container'>
         <div className='form-container sign-up-container'>
-
-          <form action='' onSubmit={daftar}> 
+          <form action='' onSubmit={daftar}>
             <h1>Buat Akun</h1>
+
             <div className='social-container'>
               <a href='#' className='social'>
                 <i className='fab fa-facebook-f' />
@@ -113,27 +99,19 @@ function Login() {
 
             <span>atau gunakan email Anda untuk pendaftaran</span>
 
-            <input type="text"  placeholder="Masukan username" value={name} onChange={(e) => setName(e.target.value)}/>
-          
-            <input type='email' placeholder='Email'  value={email} onChange={(e) => setEmail(e.target.value)} />
-           
-            <input type='password' placeholder='Kata sandi'  value={password} onChange={(e) => setPassword(e.target.value)} />
-       
-            <input type='text' placeholder='masukan nomer hp'  value={nomor_hp} onChange={(e) => setNomor_hp(e.target.value)} />
-            
-            
+            <input type='text' placeholder='Masukan Nama' value={name} onChange={(e) => setName(e.target.value)} />
+            <input type='email' placeholder='Email' value={email} onChange={(e) => setEmail(e.target.value)} required />
+            <input type='password' placeholder='Kata sandi' value={password} onChange={(e) => setPassword(e.target.value)} required />
+            <input type='text' placeholder='masukan nomer hp' value={no_telp} onChange={(e) => setNomor_hp(e.target.value)} />
+
             <div>
-            <button type="submit">Daftar</button>
+              <button type='submit'>Daftar</button>
             </div>
-          
           </form>
         </div>
 
-
-
-        
         <div className='form-container sign-in-container'>
-          <form  onSubmit={auth}> 
+          <form onSubmit={auth}>
             <h1>Masuk ke Z-Rental Car</h1>
             <div className='social-container'>
               <a href='#' className='social'>
@@ -144,16 +122,15 @@ function Login() {
               </a>
             </div>
             <span>atau gunakan email Anda untuk masuk</span>
-            <input type='email' placeholder='Email' name='email'value={email} onChange={(e) => setEmail(e.target.value)} />
-            {errors.email && <span className="text-danger">{errors.email} </span>}
+            <input type='email' placeholder='Email' name='email' value={email} onChange={(e) => setEmail(e.target.value)} />
+            {errors.email && <span className='text-danger'>{errors.email} </span>}
 
-            <input type='password' placeholder='Kata sandi' name="password" value={password} onChange={(e) => setPassword(e.target.value)} />
-            {errors.password && <span className="text-danger">{errors.password} </span>}
+            <input type='password' placeholder='Kata sandi' name='password' value={password} onChange={(e) => setPassword(e.target.value)} />
+
             <a href='#'>Lupa kata sandi?</a>
-            <button type="submit">Masuk</button>
+            <button type='submit'>Masuk</button>
           </form>
         </div>
-
 
         <div className='overlay-container'>
           <div className='overlay'>

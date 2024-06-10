@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import "../css/header.css";
+import Logo from "/assets/img/LogoRent.png";
 
 const Header = () => {
   return (
@@ -7,7 +8,7 @@ const Header = () => {
       <header id='header' className='header d-flex align-items-center fixed-top sticked'>
         <div className='container-fluid container-xl d-flex align-items-center justify-content-between'>
           <a href='./' className='logo'>
-            <img src='assets/img/LogoRent.png' alt='logo' />
+            <img src={Logo} alt='logo' />
           </a>
           <i className='mobile-nav-toggle mobile-nav-show bi bi-list' />
           <i className='mobile-nav-toggle mobile-nav-hide d-none bi bi-x' />

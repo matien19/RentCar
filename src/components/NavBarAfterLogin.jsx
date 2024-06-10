@@ -1,38 +1,34 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "../css/header.css";
 import axios from "axios";
 // import {jwtDecode} from "jwt-decode";
 import { useState, useEffect } from "react";
-
+import Logo from "/assets/img/LogoRent.png";
 
 const Header = () => {
-
-
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
     // Fungsi untuk mendapatkan data users dari server
     const fetchUsers = async () => {
       try {
-        const response = await axios.get('http://localhost:3000/users'); 
+        const response = await axios.get("http://localhost:3000/users");
         setUsers(response.data);
         console.log(response.data);
       } catch (error) {
-        console.error('Error fetching users:', error);
+        console.error("Error fetching users:", error);
       }
     };
 
     fetchUsers();
   }, []);
 
- 
-
   return (
     <>
       <header id='header' className='header d-flex align-items-center fixed-top sticked'>
         <div className='container-fluid container-xl d-flex align-items-center justify-content-between'>
-          <a href='./' className='logo'>
-            <img src='assets/img/LogoRent.png' alt='logo' />
+          <a href='./HomePage' className='logo'>
+            <img src={Logo} alt='logo' />
           </a>
           <i className='mobile-nav-toggle mobile-nav-show bi bi-list' />
           <i className='mobile-nav-toggle mobile-nav-hide d-none bi bi-x' />
@@ -60,16 +56,11 @@ const Header = () => {
                 <Link to='/Sign'>Pesanan</Link>
               </li>
               <li>
-
                 <ul>
-                {users.map((user, index) => (
-          <li key={index}>{user.name}</li>
-          ))}
-
+                  {users.map((user, index) => (
+                    <li key={index}>{user.name}</li>
+                  ))}
                 </ul>
-              
-              
-                
               </li>
             </ul>
           </nav>

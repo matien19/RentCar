@@ -1,4 +1,10 @@
 import "../css/footer.css";
+import Logo from "/assets/img/LogoRent.png";
+import BcaLogo from "/assets/img/logo_bank/bca.png";
+import BriLogo from "/assets/img/logo_bank/bri.png";
+import BniLogo from "/assets/img/logo_bank/bni.png";
+import DanaLogo from "/assets/img/logo_bank/dana.png";
+import MandiriLogo from "/assets/img/logo_bank/mandiri.png";
 
 const Footer = () => {
   return (
@@ -10,7 +16,7 @@ const Footer = () => {
               <a href='./' className='logo d-flex align-items-center'>
                 <span>
                   {" "}
-                  <img src='assets/img/LogoRent.png' alt='logo' />{" "}
+                  <img src={Logo} alt='logo' />{" "}
                 </span>
               </a>
             </div>
@@ -32,11 +38,11 @@ const Footer = () => {
             <div className='col-lg-4 col-6 footer-links '>
               <h4>Pembayaran Melalui</h4>
               <div className='d-flex flex-wrap'>
-                <img className='p-2' src='./assets/img/logo_bank/bca.png' alt='Bootstrap 5 Logo' />
-                <img className='p-2' src='./assets/img/logo_bank/bni.png' alt='Bootstrap 5 Logo' />
-                <img className='p-2' src='./assets/img/logo_bank/bri.png' alt='Bootstrap 5 Logo' />
-                <img className='p-2' src='./assets/img/logo_bank/dana.png' alt='Bootstrap 5 Logo' />
-                <img className='p-2' src='./assets/img/logo_bank/mandiri.png' alt='Bootstrap 5 Logo' />
+                <img className='p-2' src={BcaLogo} alt='Bootstrap 5 Logo' />
+                <img className='p-2' src={BriLogo} alt='Bootstrap 5 Logo' />
+                <img className='p-2' src={BniLogo} alt='Bootstrap 5 Logo' />
+                <img className='p-2' src={DanaLogo} alt='Bootstrap 5 Logo' />
+                <img className='p-2' src={MandiriLogo} alt='Bootstrap 5 Logo' />
               </div>
             </div>
             <div className='col-lg-4 col-6 footer-links '>
