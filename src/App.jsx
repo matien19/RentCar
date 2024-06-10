@@ -14,6 +14,7 @@ import Order from "./pages/AfterLogin/Order";
 import Pembayaran from "./pages/AfterLogin/Pembayaran";
 import DetailOrder from "./pages/AfterLogin/DetailOrder";
 import RegisterPage from "./pages/RegisterPage";
+import PesananSaya from "./pages/AfterLogin/PesananSaya";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
@@ -38,6 +39,7 @@ function App() {
           <Route path='/TelagaBiru' Component={TelagaBiru} />
           <Route path='/PondokCai' Component={PondokCai} />
           <Route path='/EditAkun' Component={EditAkun} />
+          <Route path='/PesananSaya' Component={PesananSaya} />
         </Routes>
       </Router>
     </>
