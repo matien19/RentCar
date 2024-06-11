@@ -39,19 +39,22 @@ delete http://localhost:5000/logout
 ###
 GET http://localhost:5000/transaksi
 ###
-GET http://localhost:5000/transaksi/13322024611956
+GET http://localhost:5000/transaksi/132220246111720
 
 ###
 POST  http://localhost:5000/transaksi
 Content-Type: application/json
 
 {
+
+     "noTransaksi": "124234234234234", 
      "idUser": "1", 
      "idArmada": "3", 
      "idDriver": "2", 
      "tglMulai": "2024-12-06/",
      "durasi": "2",
-     "price": "500000"
+     "price": "500000",
+     "alamat": "Pagojengan"
 }
 
 

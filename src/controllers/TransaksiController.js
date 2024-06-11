@@ -19,20 +19,12 @@ export const getTransaksiByNo = async (req, res) => {
 };
 
 export const createTransaksi = async (req, res) => {
-  const { idUser, idArmada, idDriver, tglMulai, durasi, price } = req.body;
+  const {noTransaksi, idUser, idArmada, idDriver, tglMulai, durasi, price, alamat } = req.body;
   const total = price * durasi;
-  const currentTimestamp = Date.now();
-  const date = new Date(currentTimestamp);
-
-  const year = date.getFullYear();
-  const month = date.getMonth() + 1;
-  const day = date.getDate();
-  const hours = date.getHours();
-  const minutes = date.getMinutes();
-  const noTransaksi = idUser + idArmada + idDriver + durasi + year + month + day + hours + minutes;
+  
 
   try {
-    await db.query(`INSERT INTO tbl_transaksi (no_transaksi, id_user, id_armada, id_driver, tgl_mulai, durasi, total) values (?, ?, ?, ?, ?, ?, ?)`, [noTransaksi, idUser, idArmada, idDriver, tglMulai, durasi, total]);
+    await db.query(`INSERT INTO tbl_transaksi (no_transaksi, id_user, id_armada, id_driver, tgl_mulai, durasi, total, alamat) values (?, ?, ?, ?, ?, ?, ?, ?)`, [noTransaksi, idUser, idArmada, idDriver, tglMulai, durasi, total, alamat]);
     res.status(201).json({ msg: "Transaksi Created successfuly" });
   } catch (error) {
     console.log(error.message);
