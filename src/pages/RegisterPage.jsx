@@ -16,7 +16,7 @@ function Login() {
 
   const [errors, setErrors] = useState({});
 
-  const history = useNavigate();
+  const navigate = useNavigate();
   const [msg, setMsg] = useState("");
 
   const auth = async (e) => {
@@ -24,12 +24,16 @@ function Login() {
     e.preventDefault();
 
     try {
-      await axios.post("http://localhost:5000/login", {
-        email: email,
-        password: password,
-      });
+      await axios.post(
+        "http://localhost:5000/login",
+        {
+          email: email,
+          password: password,
+        },
+        { withCredentials: true }
+      );
 
-      history("/HomePage");
+      navigate("/HomePage");
     } catch (error) {
       if (error.response) {
         setMsg(error.response.data.msg);

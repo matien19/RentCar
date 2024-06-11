@@ -15,7 +15,7 @@ const Armada = () => {
             <div className='d-flex flex-wrap justify-content-between gap-3'>
               {armadaData.map((item, index) => (
                 <div key={index} className='card' data-aos='fade-up' data-aos-delay={100 * (index + 1)}>
-                  <img src={item.image} className='card-img-top' alt={item.name} />
+                  <img src={item.image} className='card-img-top' alt='aa' />
                   <div className='card-body'>
                     <h5 className='card-title'>{item.name}</h5>
                     <p className='card-text'>

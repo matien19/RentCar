@@ -1,4 +1,5 @@
-// import React from "react";
+import { useState, useEffect } from "react";
+import axios from "axios";
 import Button from "react-bootstrap/Button";
 import Carousel from "../../components/Carousel";
 import "../../css/AfterLogin/HomePage.css";
@@ -7,9 +8,9 @@ import Footer from "../../components/Footer";
 import { useNavigate } from "react-router-dom";
 
 function HomePage() {
-  const history = useNavigate();
+  const navigate = useNavigate();
   const Pengemudi = () => {
-    history("/Order");
+    navigate("/Order");
   };
 
   return (
@@ -31,7 +32,7 @@ function HomePage() {
             <div className='ButtonPesan'>
               <Button variant='primary' onClick={Pengemudi} size='lg'>
                 Pesan Dengan Pengemudi
-              </Button>{" "}
+              </Button>
               <Button variant='primary' size='lg'>
                 Pesan Tanpa Pengemudi
               </Button>

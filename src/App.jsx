@@ -31,7 +31,7 @@ function App() {
           <Route path='/HomePage' Component={HomePage} />
           <Route path='/Order' Component={Order} />
           <Route path='/Order/:id' Component={DetailOrder} />
-          <Route path='/Detail' Component={DetailPesanan} />
+          <Route path='/Detail/:no' Component={DetailPesanan} />
           <Route path='/MetodePembayaran' Component={MetodePembayaran} />
           <Route path='/Pembayaran' Component={Pembayaran} />
           <Route path='/HutanPinus' Component={HutanPinus} />

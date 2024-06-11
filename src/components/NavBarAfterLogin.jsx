@@ -1,27 +1,28 @@
 import { Link } from "react-router-dom";
 import "../css/header.css";
+import Dropdown from "react-bootstrap/Dropdown";
 import axios from "axios";
-// import {jwtDecode} from "jwt-decode";
+import { jwtDecode } from "jwt-decode";
 import { useState, useEffect } from "react";
 import Logo from "/assets/img/LogoRent.png";
 
 const Header = () => {
-  const [users, setUsers] = useState([]);
+  const [name, setName] = useState("");
 
   useEffect(() => {
-    // Fungsi untuk mendapatkan data users dari server
-    const fetchUsers = async () => {
-      try {
-        const response = await axios.get("http://localhost:3000/users");
-        setUsers(response.data);
-        console.log(response.data);
-      } catch (error) {
-        console.error("Error fetching users:", error);
-      }
-    };
-
-    fetchUsers();
+    refreshToken();
   }, []);
+
+  const refreshToken = async () => {
+    try {
+      const response = await axios.get("http://localhost:5000/token", { withCredentials: true });
+
+      const decoded = jwtDecode(response.data.accessToken);
+      setName(decoded.name);
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   return (
     <>
@@ -56,11 +57,20 @@ const Header = () => {
                 <Link to='/PesananSaya'>Pesanan</Link>
               </li>
               <li>
-                <ul>
-                  {users.map((user, index) => (
-                    <li key={index}>{user.name}</li>
-                  ))}
-                </ul>
+                <Dropdown>
+                  <Dropdown.Toggle variant='light' id='dropdown-basic'>
+                    <i className='fas fa-user'></i> {name}
+                  </Dropdown.Toggle>
+
+                  <Dropdown.Menu>
+                    <Dropdown.Item href='/pengaturanAkun'>
+                      <i className='fas fa-cog'></i> Pengaturan
+                    </Dropdown.Item>
+                    <Dropdown.Item href='/logout'>
+                      <i className='fas fa-sign-out-alt'></i> Keluar
+                    </Dropdown.Item>
+                  </Dropdown.Menu>
+                </Dropdown>
               </li>
             </ul>
           </nav>
