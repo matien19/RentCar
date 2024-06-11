@@ -26,7 +26,7 @@ const Header = () => {
                 <Link to='/tentangkami'>Tentang Kami</Link>
               </li>
               <li>
-                <Link to='/kontak'>hubungi Kami</Link>
+                <Link to='/kontak'>Hubungi Kami</Link>
               </li>
             </ul>
           </nav>

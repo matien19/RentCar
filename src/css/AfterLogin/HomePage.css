@@ -48,4 +48,14 @@
   margin-left: 100px;
 }
 
+
 /* END HOMEPAGE */
+
+/* CARD SLIDER */
+
+.deskripsi-cardSlider {
+  position: relative;
+  top: -5px;
+  left: -20px
+  ;
+}

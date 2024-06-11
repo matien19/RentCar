@@ -96,7 +96,7 @@ const Order = () => {
                 <div className='card' key={Armada.id} data-aos='fade-up' data-aos-delay={100}>
                   <img src={Armada.image} className='card-img-top' alt='Honda Brio 2020' />
                   <div className='card-body'>
-                    <h5 className='card-title fw-bold'>{Armada.name}</h5>
+                    <h5 className='card-title-armada'>{Armada.name}</h5>
                     <p className='card-text' />
                     <div className='d-flex justify-content-between p-3'>
                       <div>
@@ -113,7 +113,7 @@ const Order = () => {
                       </div>
                     </div>
 
-                    <select className=' btn btn-md btn-warning rounded-5 w-75' onChange={handleDriverChange}>
+                    <select className=' btn btn-md btn-warning rounded-5 w-75 ms-3' onChange={handleDriverChange}>
                       <option>-- Pilih Pengemudi --</option>
                       {Drivers.map((driver) => (
                         <option key={driver.id} value={driver.id}>
@@ -126,7 +126,11 @@ const Order = () => {
               </div>
               <div className='col-md-8'>
                 <div className='card' data-aos='fade-up' data-aos-delay={200}>
-                  <div className='card-body'>
+                <div className="text-center mt-5">
+                    <h2>FORM PEMESANAN</h2>
+                  </div>
+                  <div className='card-body-formPesanan mt-3'>
+                  
                     <form onSubmit={saveTransaksi}>
                       <div className='row p-1'>
                         <div className='col-lg-4'>
@@ -140,7 +144,7 @@ const Order = () => {
                       </div>
                       <div className='row p-3'>
                         <h5>Alamat penjemputan</h5>
-                        <input type='text' placeholder='Masukan alamat..' value={alamat} onChange={(e) => setAlamat(e.target.value)} />
+                        <textarea type='text' placeholder='Masukan alamat..' value={alamat} onChange={(e) => setAlamat(e.target.value)} />
                         <input type='text' value={idUser} hidden />
                         <input type='text' value={idDriver} hidden />
                         <input type='text' value={idArmada} hidden />
@@ -159,40 +163,23 @@ const Order = () => {
                   </div>
                 </div>
                 <br />
-                <div className='card' data-aos='fade-up' data-aos-delay={300}>
-                  <div className='card-body'>
-                    <h4>Informasi Layanan</h4>
-                    <div className='d-flex justify-content-between align-items-center'>
-                      <div>
-                        <p>
-                          <i className='fas fa-clock' /> 24 Jam Layanan Darurat
-                        </p>
-                        <p>
-                          <i className='fas fa-car' /> Pengganti Mobil Rusak
-                        </p>
-                        <p>
-                          <i className='fas fa-shield-alt' /> Asuransi
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                
               </div>
 
               <div className='text-center fw-bold mt-5' data-aos='fade-up' data-aos-delay={100}>
                 <h2>Informasi Pengemudi</h2>
               </div>
-              <div className='row mt-12 mt-3'>
+              <div className='row mt-12 mt-3 '>
                 {Drivers.map((driver) => (
                   <div className='col-md-3 ' key={driver.id}>
-                    <div className='card rounded-card' data-aos='fade-up' data-aos-delay={100}>
+                    <div className='cardPengemudi rounded-card' data-aos='fade-up' data-aos-delay={100}>
                       <div className='card-body d-flex align-items-center'>
-                        <img src={driver.foto} className='rounded p-2' alt='Nama Petugas' style={{ width: 120, height: 80 }} />
+                        <img src={driver.foto} className='imgDriver' alt='Nama Petugas' />
                         <div className='ml-3'>
-                          <h6 className='card-title'>{driver.name}</h6>
-                          <p className='card-text'>{driver.deskripsi}</p>
-                          <p className='card-text'>
-                            <i className='fab fa-whatsapp' /> {driver.no_telp} <i className='fab fa-instagram ms-3' /> {driver.instagram}
+                          <h6 className='card-title-pengemudi mt-5 ms-2 '>{driver.name}</h6>
+                          <p className='card-text-driver '>{driver.deskripsi}</p>
+                          <p className='card-text-sosmed-driver'>
+                            <i className='fab fa-whatsapp ms-2 ' /> {driver.no_telp} <i className='fab fa-instagram  ms-2' /> {driver.instagram}
                           </p>
                         </div>
                       </div>

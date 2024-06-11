@@ -69,22 +69,22 @@ const Order = () => {
                         <div className='col-md-8'>
                           <div className='card-body'>
                             <h5 className='card-title'>{car.name} </h5>
-                            <div className='d-flex justify-content-between'>
+                            <div className='d-flex justify-content-between '>
                               <div>
-                                <i className='fas fa-car' /> {car.seats} kursi
+                                <i className='fas fa-car mt-2' /> {car.seats} kursi
                                 <br />
-                                <i className='fas fa-suitcase' /> {car.luggage} koper
+                                <i className='fas fa-suitcase ' /> {car.luggage} koper
                                 <br />
                               </div>
                               <div>
-                                <i className='fas fa-shield-alt' /> {car.insurance}
+                                <i className='fas fa-shield-alt mt-2' /> {car.insurance}
                                 <br />
                                 <i className='fas fa-user' /> {car.driver}
                                 <br />
                               </div>
-                              <div className='text-end'>
+                              <div className='text-end '>
                                 <p>Rp {car.price}/Hari</p>
-                                <Link to={`/order/${car.id}`} className='btn btn-sm btn-warning rounded-5 w-75'>
+                                <Link to={`/order/${car.id}`} className='btn btn-sm btn-warning rounded-5 w-75 mt-3 text-white'>
                                   Pilih
                                 </Link>
                               </div>
