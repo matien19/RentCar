@@ -18,7 +18,7 @@ function HomePage() {
       <Header />
       <section className='HeroSection d-flex align-items-center'>
         <div className='container '>
-          <div className='col-lg-6 d-flex flex-column gap-3'>
+          <div className='col-lg-7 d-flex flex-column gap-3'>
             <div>
               <h1>
                 Kami Membangun Kepercayaan <br />
@@ -30,7 +30,7 @@ function HomePage() {
               </h5>
             </div>
             <div className='ButtonPesan'>
-              <Button className="rounded-5" variant='primary' onClick={Pengemudi} size='lg'>
+              <Button className='rounded-5' variant='primary' onClick={Pengemudi} size='lg'>
                 Pesan Dengan Pengemudi
               </Button>
               <Button className='ms-3 rounded-5' variant='primary' size='lg '>

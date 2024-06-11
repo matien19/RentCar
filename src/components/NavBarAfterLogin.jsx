@@ -16,7 +16,6 @@ const Header = () => {
   const refreshToken = async () => {
     try {
       const response = await axios.get("http://localhost:5000/token", { withCredentials: true });
-
       const decoded = jwtDecode(response.data.accessToken);
       setName(decoded.name);
     } catch (error) {
@@ -63,7 +62,7 @@ const Header = () => {
                   </Dropdown.Toggle>
 
                   <Dropdown.Menu>
-                    <Dropdown.Item href='/pengaturanAkun'>
+                    <Dropdown.Item href='/InformasiAkun'>
                       <i className='fas fa-cog'></i> Pengaturan
                     </Dropdown.Item>
                     <Dropdown.Item href='/logout'>

@@ -1,158 +1,143 @@
-.DetailContainer{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin-top: 150px;
-    margin-bottom: 100px;
-    margin-left: 50px;
-    
+.DetailContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 150px;
+  margin-bottom: 100px;
+  margin-left: 50px;
 }
 
 /* .gridSatuDetail{
     margin-left: 10px;
 } */
 
-
-.formLokasi{
-    background-color: white;
-   width:  500px;
-   height: 220px;
-   padding: 20px;
-    margin-left: 30px;
-    border-radius: 5px;
-    box-shadow: 1px 1px 6px rgb(144, 142, 142);
+.formLokasi {
+  background-color: white;
+  width: 500px;
+  height: 220px;
+  padding: 20px;
+  margin-left: 30px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 6px rgb(144, 142, 142);
 }
 
-.formLokasi h5{
-    font-size: 23px;
+.formLokasi h5 {
+  font-size: 23px;
 }
 
-.formLokasi input{
-    width: 450px;
-    height: 80px;
-    border-radius: 5px;
-    background-color: #F0E8E8;
-    border-color: #F0E8E8;
-    
- 
+.formLokasi input {
+  width: 450px;
+  height: 80px;
+  border-radius: 5px;
+  background-color: #f0e8e8;
+  border-color: #f0e8e8;
 }
-
-
 
 .formDetailKontak {
-    background-color: rgb(255, 255, 255);
-    width:  500px;
-    padding: 20px;
-     margin-left: 30px;
-     border-radius: 5px;
-     margin-top: 30px;
-     box-shadow: 1px 1px 6px rgb(144, 142, 142);
+  background-color: rgb(255, 255, 255);
+  width: 500px;
+  padding: 20px;
+  margin-left: 30px;
+  border-radius: 5px;
+  margin-top: 30px;
+  box-shadow: 1px 1px 6px rgb(144, 142, 142);
 }
 
-
-
-.formDetailKontak h4{
-    font-size: 15px;
+.formDetailKontak h4 {
+  font-size: 15px;
 }
 
-.formDetailKontak h5{
-    font-size: 15px;
+.formDetailKontak h5 {
+  font-size: 15px;
 }
 
-.formDetailKontak h3{
-    font-size: 25px;
+.formDetailKontak h3 {
+  font-size: 25px;
 }
 
-
-.formDetailPesanan1{
-    background-color: white;
-    border-radius: 5px;
-    box-shadow: 1px 1px 6px rgb(144, 142, 142);
-    width: 600px;
-    height: 500px;
-    margin-left: 12px;
+.formDetailPesanan1 {
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 1px 1px 6px rgb(144, 142, 142);
+  width: 600px;
+  height: 500px;
+  margin-left: 12px;
 }
-.card-informasi-layanan{
-    background-color: white;
-    width:  500px;
-    height: 200px;
-    margin-left: 30px;
-    border-radius: 5px;
-     margin-top: 30px;
-     box-shadow: 1px 1px 6px rgb(144, 142, 142);
-}
-
-.card-informasi-layanan .text-informasi, p{
-    margin-left: 20px;
-    position: relative;
-    top: 20px;
-    
-    
-    
-    
+.card-informasi-layanan {
+  background-color: white;
+  width: 500px;
+  height: 200px;
+  margin-left: 30px;
+  border-radius: 5px;
+  margin-top: 30px;
+  box-shadow: 1px 1px 6px rgb(144, 142, 142);
 }
 
-
-
-
-.formMerkMobil h2{
-    text-align: center;
-    position: relative;
-    top: 20px;
+.card-informasi-layanan .text-informasi,
+p {
+  margin-left: 20px;
+  position: relative;
+  top: 20px;
 }
 
-.FormPesanan{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    width: 700px;
-    margin-left: 20px;
-    margin-top: 50px;
-
+.formMerkMobil h2 {
+  text-align: center;
+  position: relative;
+  top: 20px;
 }
 
-.FormPesanan .dataHarga{
-    margin-top: -20px;
+.FormPesanan {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 700px;
+  margin-left: 20px;
+  margin-top: 50px;
 }
 
-hr{
-    width: 600px;
-    position: relative;
-    left: 40px;
+.FormPesanan img {
+  width: 100px;
+  height: 80px;
 }
 
-.FormPesanan .kursi , .koper , .pengemudi , .asuransi{
-    display: flex;
-    gap: 10px;
-    text-align: center;
+.FormPesanan .dataHarga {
+  margin-top: -20px;
 }
 
-.dataInteriorMobil{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+hr {
+  width: 600px;
+  position: relative;
+  left: 40px;
 }
 
-.hargaSewa{
-    display: flex;
-    justify-content: end;
-    align-items: end;
-    margin-right: 40px;
+.FormPesanan .kursi,
+.koper,
+.pengemudi,
+.asuransi {
+  display: flex;
+  gap: 10px;
+  text-align: center;
 }
 
-
-.ButtonDetailPesanan{
-    display: flex;
-    justify-content: end;
-    align-items: end;
-    margin-right: 30px;
-    margin-top: 20px;
+.dataInteriorMobil {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
-
-.ButtonDetailPesanan .btn{
-    width: 205px;
-    height: 35px;
+.hargaSewa {
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  margin-right: 40px;
 }
 
+.ButtonDetailPesanan {
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  margin-right: 30px;
+  margin-top: 20px;
+}
 
-
-
-
+.ButtonDetailPesanan .btn {
+  width: 205px;
+  height: 35px;
+}

@@ -33,7 +33,10 @@ function Login() {
         { withCredentials: true }
       );
 
-      navigate("/HomePage");
+      setTimeout(() => {
+        alert("Login Sukses");
+        navigate("/HomePage");
+      });
     } catch (error) {
       if (error.response) {
         setMsg(error.response.data.msg);

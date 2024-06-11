@@ -2,7 +2,6 @@ import Form from "react-bootstrap/Form";
 import "../../css/AfterLogin/MetodePembayaran.css";
 import Header from "../../components/NavBarAfterLogin";
 import Footer from "../../components/Footer";
-import Button from "react-bootstrap/Button";
 
 function MetodePembayaran() {
   const bank = [

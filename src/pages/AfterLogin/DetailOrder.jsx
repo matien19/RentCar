@@ -46,8 +46,9 @@ const Order = () => {
         alamat: alamat,
       });
       setTimeout(() => {
-        alert("chek detail dan lanjut pembayaran"), navigate(`/detail/${noTransaksi}`);
-      }, 3000);
+        alert("chek detail dan lanjut pembayaran");
+        navigate(`/detail/${noTransaksi}`);
+      }, 1000);
     } catch (error) {
       console.log(error.response);
     }
@@ -63,16 +64,25 @@ const Order = () => {
     }
   };
   const getArmadaById = async () => {
-    const response = await axios.get(`http://localhost:5000/Armadas/${id}`);
-    setArmadas(response.data[0]);
-    setIdArmada(response.data[0].id);
-    setPrice(response.data[0].price);
+    try {
+      const response = await axios.get(`http://localhost:5000/Armadas/${id}`);
+      setArmadas(response.data[0]);
+      setIdArmada(response.data[0].id);
+      setPrice(response.data[0].price);
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   const getDrivers = async () => {
-    const response = await axios.get("http://localhost:5000/Drivers");
-    setDrivers(response.data);
+    try {
+      const response = await axios.get("http://localhost:5000/Drivers");
+      setDrivers(response.data);
+    } catch (error) {
+      console.log(error);
+    }
   };
+
   const handleDriverChange = (e) => {
     setIdDriver(e.target.value);
     const currentTimestamp = Date.now();
@@ -126,11 +136,10 @@ const Order = () => {
               </div>
               <div className='col-md-8'>
                 <div className='card' data-aos='fade-up' data-aos-delay={200}>
-                <div className="text-center mt-5">
+                  <div className='text-center mt-5'>
                     <h2>FORM PEMESANAN</h2>
                   </div>
                   <div className='card-body-formPesanan mt-3'>
-                  
                     <form onSubmit={saveTransaksi}>
                       <div className='row p-1'>
                         <div className='col-lg-4'>
@@ -153,7 +162,10 @@ const Order = () => {
                       <div className='d-flex justify-content-between align-items-center'>
                         <div>
                           <h5>Harga:</h5>
-                          <p className='price'>Rp {Armada.price}/Hari</p>
+                          <p className='price'>
+                            {new Intl.NumberFormat("id-ID", { style: "currency", currency: "IDR", maximumFractionDigits: 0 }).format(Armada.price)}
+                            /Hari
+                          </p>
                         </div>
                         <button type='submit' className='btn btn-md btn-warning rounded-5 w-25'>
                           Lanjut Pemesanan
@@ -163,7 +175,6 @@ const Order = () => {
                   </div>
                 </div>
                 <br />
-                
               </div>
 
               <div className='text-center fw-bold mt-5' data-aos='fade-up' data-aos-delay={100}>

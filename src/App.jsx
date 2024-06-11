@@ -32,8 +32,8 @@ function App() {
           <Route path='/HomePage' Component={HomePage} />
           <Route path='/Order' Component={Order} />
           <Route path='/Order/:id' Component={DetailOrder} />
-          <Route path='/Detail/:no' Component={DetailPesanan} />
-          <Route path='/MetodePembayaran' Component={MetodePembayaran} />
+          <Route path='/Detail/:no_transaksi' Component={DetailPesanan} />
+          <Route path='/MetodePembayaran/:no_transaksi' Component={MetodePembayaran} />
           <Route path='/Pembayaran' Component={Pembayaran} />
           <Route path='/HutanPinus' Component={HutanPinus} />
           <Route path='/Woodland' Component={Woodland} />
@@ -41,7 +41,7 @@ function App() {
           <Route path='/PondokCai' Component={PondokCai} />
           <Route path='/EditAkun' Component={EditAkun} />
           <Route path='/PesananSaya' Component={PesananSaya} />
-          <Route path="/InformasiAkun" Component={InformasiAkun}/>
+          <Route path='/InformasiAkun' Component={InformasiAkun} />
         </Routes>
       </Router>
     </>
