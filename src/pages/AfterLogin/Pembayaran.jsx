@@ -13,13 +13,13 @@ const Pembayaran = () => {
           <div className='card p-2 mt-3'>
             <div className='card-body'>
               <h4>Status</h4>
-              <p>pending</p>
+              <p className="deskripsi-pembayaran">pending</p>
               <h4>No VA</h4>
-              <p>88899898989890976</p>
-              <h4>Total Pembayaran</h4>
-              <p>400.000</p>
+              <p className="deskripsi-pembayaran">88899898989890976</p>
+              <h4 >Total Pembayaran</h4>
+              <p className="deskripsi-pembayaran">Rp. 400.000</p>
               <h4>No Transaksi</h4>
-              <p>8812809012837</p>
+              <p className="deskripsi-pembayaran">8812809012837</p>
             </div>
           </div>
         </section>
@@ -33,7 +33,7 @@ const Pembayaran = () => {
                     <p>seret &amp; letakkan file di sini ...</p>
                   </div>
                   <input type='file' id='fileInput' />
-                  <button type='submit' className='btn btn-sm btn-warning rounded-5 w-25'>
+                  <button type='submit' className='btn btn-sm btn-warning rounded-5 w-25 text-white'>
                     Kirim
                   </button>
                 </div>

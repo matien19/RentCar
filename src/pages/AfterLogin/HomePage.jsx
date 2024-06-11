@@ -29,10 +29,10 @@ function HomePage() {
               </h5>
             </div>
             <div className='ButtonPesan'>
-              <Button variant='primary' onClick={Pengemudi} size='lg'>
+              <Button className="rounded-5" variant='primary' onClick={Pengemudi} size='lg'>
                 Pesan Dengan Pengemudi
               </Button>{" "}
-              <Button variant='primary' size='lg'>
+              <Button className='ms-3 rounded-5' variant='primary' size='lg '>
                 Pesan Tanpa Pengemudi
               </Button>
             </div>

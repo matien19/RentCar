@@ -14,7 +14,7 @@ const Home = () => {
             <div className='row gy-4 d-flex justify-content-between'>
               <div className='col-lg-6 order-2 order-lg-1 d-flex flex-column '>
                 <h2 data-aos='fade-up'>Wujudkan Impianmu Bersama Kami Yang Terpercaya!</h2>
-                <p data-aos='fade-up' data-aos-delay={100}>
+                <p className="deskripsi" data-aos='fade-up' data-aos-delay={100}>
                   Kami membuktikan pilihan mobil terbaik dan layanan ahli untuk pengalaman pelanggan terbaik
                 </p>
                 <button data-aos='fade-up' data-aos-delay={100} type='submit' className='btn btn-primary'>
@@ -51,7 +51,7 @@ const Home = () => {
                       <div className='card banner-fitur' data-aos='fade-up' data-aos-delay={100} style={{ backgroundImage: 'url("assets/img/unsplash2.png")' }}>
                         <div className='card-body d-flex flex-column justify-content-end'>
                           <h3 className='card-title mt-auto'>Pelayanan 24/7</h3>
-                          <p className='card-text'>Tim kami tersedia 24/7 untuk menjawab pertanyaan atau memberikan bantuan apa pun yang Anda butuhkan.</p>
+                          <p  className=' deskripsi'>Tim kami tersedia 24/7 untuk menjawab pertanyaan atau memberikan bantuan apa pun yang Anda butuhkan.</p>
                         </div>
                       </div>
                     </div>
@@ -59,7 +59,7 @@ const Home = () => {
                       <div className='card banner-fitur' data-aos='fade-up' data-aos-delay={200} style={{ backgroundImage: 'url("assets/img/unsplash3.png")' }}>
                         <div className='card-body d-flex flex-column justify-content-end'>
                           <h3 className='card-title'>Garansi Uang Kembali</h3>
-                          <p className='card-text'>Jika Anda tidak senang dengan layanan kami, kami akan mengembalikan uang Anda sepenuhnya.</p>
+                          <p className='deskripsi'>Jika Anda tidak senang dengan layanan kami, kami akan mengembalikan uang Anda sepenuhnya.</p>
                         </div>
                       </div>
                     </div>
@@ -67,7 +67,7 @@ const Home = () => {
                       <div className='card banner-fitur' data-aos='fade-up' data-aos-delay={300} style={{ backgroundImage: 'url("assets/img/unsplash4.png")' }}>
                         <div className='card-body d-flex flex-column justify-content-end'>
                           <h3 className='card-title'>Penawaran Terjangkau</h3>
-                          <p className='card-text'>Dapatkan penawaran termurah dari kami! Sewa mobil dengan harga terjangkau yang pasti cocok untuk Anda.</p>
+                          <p className='deskripsi'>Dapatkan penawaran termurah dari kami! Sewa mobil dengan harga terjangkau yang pasti cocok untuk Anda.</p>
                         </div>
                       </div>
                     </div>
@@ -75,7 +75,7 @@ const Home = () => {
                       <div className='card banner-fitur' data-aos='fade-up' data-aos-delay={400} style={{ backgroundImage: 'url("assets/img/unsplash5.png")' }}>
                         <div className='card-body d-flex flex-column justify-content-end'>
                           <h3 className='card-title'>Kendaraan Terdaftar</h3>
-                          <p className='card-text'>Semua kendaraan kami sudah terdaftar. Anda bisa yakin bahwa semua dokumen lengkap dan sesuai dengan standar.</p>
+                          <p className='deskripsi'>Semua kendaraan kami sudah terdaftar. Anda bisa yakin bahwa semua dokumen lengkap dan sesuai dengan standar.</p>
                         </div>
                       </div>
                     </div>

@@ -17,7 +17,7 @@ const Kontak = () => {
             <div className='col-lg-4 col-md-12 text-center' data-aos='fade-up' data-aos-delay={100}>
               <i className='bi bi-geo-alt' />
               <h3>Lokasi Kami</h3>
-              <p>
+              <p className="info-lokasi">
                 Perum Griya, Ciawigebang <br />
                 Kuningan Jawa Barat, Indonesia
               </p>
@@ -25,13 +25,13 @@ const Kontak = () => {
             <div className='col-lg-4 col-6 text-center' data-aos='fade-up' data-aos-delay={200}>
               <i className='bi bi-envelope' />
               <h3>Alamat Email</h3>
-              <p>Mochamadzidan1@gmail.com</p>
+              <p className="info-lokasi">Mochamadzidan1@gmail.com</p>
             </div>
-            <div className='col-lg-4 col-6 text-center' data-aos='fade-up' data-aos-delay={300}>
+            <div className='col-lg-4 col-6 text-center ' data-aos='fade-up' data-aos-delay={300}>
               <i className='bi bi-telephone' />
               <h3>Nomor Telepon</h3>
-              <p>+62877180976307</p>
-              <p>+62822218183889</p>
+              <p className="info-lokasi">+62877180976307<br/>
+             +62822218183889</p>
             </div>
           </div>
         </section>
@@ -42,7 +42,7 @@ const Kontak = () => {
             </div>
             <div className='col-lg-6 col-md-8 p-5' data-aos='zoom-in' data-aos-delay={200}>
               <h1 className="ms-1">Ada yang bisa kami <br /><span>bantu?</span> </h1>
-              <p>Tim kami tersedia 24/7 untuk menjawab pertanyaan atau memberikan bantuan apa pun yang Anda butuhkan.</p>
+              <p className='ms-1 mb-5'>Tim kami tersedia 24/7 untuk menjawab pertanyaan atau memberikan bantuan apa pun yang Anda butuhkan.</p>
               <div className='form d-flex flex-column justify-content-between gap-2'>
                 <input type='text' name='nama' placeholder='Nama' />
                 <input type='email' name='email' placeholder='Email' />

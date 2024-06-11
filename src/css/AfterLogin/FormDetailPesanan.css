@@ -15,10 +15,15 @@
 .formLokasi{
     background-color: white;
    width:  500px;
+   height: 220px;
    padding: 20px;
     margin-left: 30px;
     border-radius: 5px;
     box-shadow: 1px 1px 6px rgb(144, 142, 142);
+}
+
+.formLokasi h5{
+    font-size: 23px;
 }
 
 .formLokasi input{
@@ -66,6 +71,28 @@
     height: 500px;
     margin-left: 12px;
 }
+.card-informasi-layanan{
+    background-color: white;
+    width:  500px;
+    height: 200px;
+    margin-left: 30px;
+    border-radius: 5px;
+     margin-top: 30px;
+     box-shadow: 1px 1px 6px rgb(144, 142, 142);
+}
+
+.card-informasi-layanan .text-informasi, p{
+    margin-left: 20px;
+    position: relative;
+    top: 20px;
+    
+    
+    
+    
+}
+
+
+
 
 .formMerkMobil h2{
     text-align: center;
@@ -117,6 +144,12 @@ hr{
     align-items: end;
     margin-right: 30px;
     margin-top: 20px;
+}
+
+
+.ButtonDetailPesanan .btn{
+    width: 205px;
+    height: 35px;
 }
 
 

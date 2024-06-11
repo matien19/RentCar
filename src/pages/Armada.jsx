@@ -18,9 +18,9 @@ const Armada = () => {
                   <img src={item.image} className='card-img-top' alt={item.name} />
                   <div className='card-body'>
                     <h5 className='card-title'>{item.name}</h5>
-                    <p className='card-text'>
-                      <div className='d-flex justify-content-between'>
-                        <div>
+                    <p className='card-text-item'>
+                      <div className='d-flex justify-content-between '>
+                        <div className="icon1">
                           <i className='fas fa-car'></i> Kursi : {item.seats}
                           <br />
                           <i className='fas fa-suitcase'></i> Koper : {item.luggage}

@@ -22,3 +22,9 @@
 .bukti-pembayaran .upload-area.drop {
   border-color: #007bff;
 }
+
+.deskripsi-pembayaran{
+  margin-left: -1px;
+  margin-top: -20px;
+
+}
