@@ -40,8 +40,12 @@ get http://localhost:5000/token
 delete http://localhost:5000/logout
 
 
+
 ###
 GET http://localhost:5000/transaksi
+###
+GET http://localhost:5000/transaksi_saya/1
+
 ###
 GET http://localhost:5000/transaksi/1720246112057
 
