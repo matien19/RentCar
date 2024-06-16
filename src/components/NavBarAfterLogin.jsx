@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "../css/header.css";
 import Dropdown from "react-bootstrap/Dropdown";
 import axios from "axios";
@@ -18,6 +18,16 @@ const Header = () => {
       const response = await axios.get("http://localhost:5000/token", { withCredentials: true });
       const decoded = jwtDecode(response.data.accessToken);
       setName(decoded.name);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const navigate = useNavigate();
+  const Logout = async () => {
+    try {
+      await axios.delete(`http://localhost:5000/logout`);
+      navigate("/");
     } catch (error) {
       console.log(error);
     }
@@ -65,9 +75,12 @@ const Header = () => {
                     <Dropdown.Item href='/InformasiAkun'>
                       <i className='fas fa-cog'></i> Pengaturan
                     </Dropdown.Item>
-                    <Dropdown.Item href='/logout'>
+                    {/* <Dropdown.Item href='/' onclick={Logout}>
                       <i className='fas fa-sign-out-alt'></i> Keluar
-                    </Dropdown.Item>
+                    </Dropdown.Item> */}
+                    <button type='submit' className='dropdown-item' onClick={Logout}>
+                      <i className='fas fa-sign-out-alt'></i> Keluar
+                    </button>
                   </Dropdown.Menu>
                 </Dropdown>
               </li>

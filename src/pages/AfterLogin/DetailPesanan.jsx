@@ -7,7 +7,7 @@ import Footer from "../../components/Footer";
 import Header from "../../components/NavBarAfterLogin";
 
 function DetailPesanan() {
-  const [idArmada, setIdArmada] = useState("");
+  const [, setIdArmada] = useState("");
   const [nameArmada, setNameArmada] = useState("");
   const [seats, setSeats] = useState("");
   const [luggage, setLuggage] = useState("");
@@ -15,7 +15,7 @@ function DetailPesanan() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [noTelp, setNoTelp] = useState("");
-  const [idDriver, setIdDriver] = useState("");
+  const [, setIdDriver] = useState("");
   const [nameDriver, setNameDriver] = useState("");
   const [noDriver, setNoDriver] = useState("");
   const [tglMulai, setTglMulai] = useState("");
@@ -58,39 +58,30 @@ function DetailPesanan() {
       setTglMulai(data.tgl_mulai);
       // setPrice(data.price);
       setTotal(data.total);
-      getDriversById();
-      getArmadaById();
+      getDetails(data.id_driver, data.id_armada); // Pass ids to getDetails
     } catch (error) {
       console.log(error.message);
     }
   };
 
-  const getDriversById = async () => {
+  const getDetails = async (idDriver, idArmada) => {
     try {
-      const response = await axios.get("http://localhost:5000/Drivers/" + idDriver);
-      const data = response.data[0];
+      const [driverResponse, armadaResponse] = await Promise.all([axios.get(`http://localhost:5000/Drivers/${idDriver}`), axios.get(`http://localhost:5000/Armadas/${idArmada}`)]);
 
-      setNameDriver(data.name);
-      setNoDriver(data.no_telp);
+      const driverData = driverResponse.data[0];
+      const armadaData = armadaResponse.data[0];
+
+      setNameDriver(driverData.name);
+      setNoDriver(driverData.no_telp);
+
+      setNameArmada(armadaData.name);
+      setSeats(armadaData.seats);
+      setLuggage(armadaData.luggage);
+      setImgArmada(armadaData.image);
     } catch (error) {
       console.log(error);
     }
   };
-
-  const getArmadaById = async () => {
-    try {
-      const response = await axios.get(`http://localhost:5000/Armadas/` + idArmada);
-      const data = response.data[0];
-
-      setNameArmada(data.name);
-      setSeats(data.seats);
-      setLuggage(data.luggage);
-      setImgArmada(data.image);
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
   return (
     <>
       <Header />

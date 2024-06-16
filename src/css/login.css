@@ -11,6 +11,11 @@
   font-weight: bold;
   margin: 0;
 }
+.container-login .tittle {
+  font-weight: bold;
+  margin: 0;
+  color: #418AD1;
+}
 
 .container-login h2 {
   text-align: center;
@@ -37,8 +42,8 @@
 
 .container-login button {
   border-radius: 20px;
-  border: 1px solid #1a776f;
-  background-color: #1a776f;
+  border: 1px solid #6eb0f1;
+  background-color: #6eb0f1;
   color: #ffffff;
   font-size: 12px;
   font-weight: bold;
@@ -152,9 +157,9 @@
 }
 
 .container-login .overlay {
-  background: #1a776f;
-  background: -webkit-linear-gradient(to right, #1a776f, #1a776f);
-  background: linear-gradient(to right, #1a776f, #1a776f);
+  background: #6eb0f1;
+  background: -webkit-linear-gradient(to right, #6eb0f1, #6eb0f1);
+  background: linear-gradient(to right, #6eb0f1, #6eb0f1);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 0 0;

@@ -93,7 +93,7 @@ function Login() {
       <div className='container' id='container'>
         <div className='form-container sign-up-container'>
           <form action='' onSubmit={daftar}>
-            <h1>Buat Akun</h1>
+            <h1 className='tittle'>Buat Akun</h1>
 
             <div className='social-container'>
               <a href='#' className='social'>
@@ -119,7 +119,7 @@ function Login() {
 
         <div className='form-container sign-in-container'>
           <form onSubmit={auth}>
-            <h1>Masuk ke Z-Rental Car</h1>
+            <h1 className='tittle'>Masuk ke Z-Rental Car</h1>
             <div className='social-container'>
               <a href='#' className='social'>
                 <i className='fab fa-facebook-f' />

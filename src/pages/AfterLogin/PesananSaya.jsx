@@ -1,9 +1,68 @@
+import { useEffect, useState } from "react";
+import axios from "axios";
+import { jwtDecode } from "jwt-decode";
+import { useParams } from "react-router-dom";
 import Footer from "../../components/Footer";
 import Header from "../../components/NavBarAfterLogin";
 import "../../css/AfterLogin/PesananSaya.css";
 import Armada from "/assets/img/armada/Avanza_New_2024.jpeg";
 
 const PesananSaya = () => {
+  const [idUser, setIdUser] = useState("");
+  const [orders, setOrder] = useState("");
+  const [idArmada, setIdArmada] = useState("");
+  const [nameArmada, setNameArmada] = useState("");
+  const [seatArmada, setSeats] = useState("");
+  const [luggageArmada, setLuggage] = useState("");
+  const [imgArmada, setImgArmada] = useState("");
+
+  useEffect(() => {
+    const initializeData = async () => {
+      await refreshToken();
+    };
+
+    initializeData();
+  }, []);
+
+  const refreshToken = async () => {
+    try {
+      const response = await axios.get("http://localhost:5000/token", { withCredentials: true });
+      const decoded = jwtDecode(response.data.accessToken);
+      console.log(decoded);
+      setIdUser(decoded.userId);
+      setIdArmada(decoded.id_armadass);
+      await getTransaksiById();
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const getTransaksiById = async () => {
+    try {
+      const response = await axios.get("http://localhost:5000/transaksi_saya/" + idUser);
+      const data = response.data;
+      console.log(data);
+      setOrder(data);
+      getArmadaById();
+    } catch (error) {
+      console.log(error.message);
+    }
+  };
+
+  const getArmadaById = async () => {
+    try {
+      const response = await axios.get(`http://localhost:5000/Armadas/` + idArmada);
+      const data = response.data[0];
+
+      setNameArmada(data.name);
+      setSeats(data.seats);
+      setLuggage(data.luggage);
+      setImgArmada(data.image);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     <>
       <Header />
