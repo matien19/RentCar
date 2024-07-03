@@ -1,0 +1,86 @@
+/*--------------------------------------------------------------
+# pesanan
+--------------------------------------------------------------*/
+.pesanan .card {
+  min-height: 200px;
+  padding: 15px;
+  position: relative;
+}
+.pesanan .card .card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+.pesanan .corner-text {
+  padding: 2px 8px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 5px;
+  font-weight: bold;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+}
+.pesanan .corner-text.manual {
+  background-color: #1a776f;
+  color: #ffffff;
+}
+.pesanan .blue-icon {
+  color: #000080;
+  margin-bottom: 10px;
+}
+.pesanan .date-info {
+  display: flex;
+  align-items: flex-start;
+  font-size: 12px; /* Smaller text size */
+}
+.pesanan .date-item {
+  display: flex;
+  align-items: center;
+  margin-right: 10px; /* Space between items */
+}
+.pesanan .date-text {
+  margin-left: 5px;
+}
+.pesanan .date-text div {
+  line-height: 1.2; /* Adjust line height for better spacing */
+}
+.pesanan .sidebar {
+  background-color: #f8f9fa;
+  padding: 20px;
+  height: 100vh; /* Set tinggi sesuai dengan tinggi viewport */
+  position: sticky;
+  top: 0; /* Letakkan sidebar di atas */
+}
+.pesanan .sidebar .account-info {
+  margin-bottom: 20px;
+}
+.pesanan .account-icon {
+  font-size: 30px;
+  margin-right: 10px;
+}
+.pesanan .account-details {
+  font-size: 14px;
+}
+.pesanan .account-name {
+  font-weight: bold;
+}
+.pesanan .sidebar-menu {
+  list-style: none;
+  padding: 0;
+}
+.pesanan .sidebar-menu li {
+  margin-bottom: 10px;
+}
+.pesanan .sidebar-menu a {
+  color: #000;
+  text-decoration: none;
+}
+.pesanan .sidebar-menu a:hover {
+  color: #007bff;
+}
+.pesanan .main-content {
+  padding-left: 20px; /* Berikan padding ke konten utama untuk memberi ruang pada sisi kiri */
+}

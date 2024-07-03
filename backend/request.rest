@@ -1,0 +1,68 @@
+
+###
+GET http://localhost:5000/Drivers
+###
+GET http://localhost:5000/Drivers/2
+
+###
+GET http://localhost:5000/Armadas
+###
+GET http://localhost:5000/Armadas
+
+###
+get http://localhost:5000/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsIm5hbWUiOiJtYXRpZW4iLCJlbWFpbCI6Im1hdGllbkBnbWFpbC5jb20iLCJub1RlbHAiOiIwODc2NzIzMjMyMzI3IiwiaWF0IjoxNzE3OTYzNDc5LCJleHAiOjE3MTgwNDk4Nzl9.0mCgkidLU59W78lRxsg5Rl94DPuF86uGYAFnPsh0LKA
+
+###
+POST  http://localhost:5000/register
+Content-Type: application/json
+
+{
+    "name": "dd",
+    "email": "dd@gmail.com",
+    "password": "12345",
+    "no_telp": "098192328138"
+}
+
+###
+post http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "matien@gmail.com",
+    "password": "12345678"
+}
+
+###
+get http://localhost:5000/token
+
+###
+delete http://localhost:5000/logout
+
+
+
+###
+GET http://localhost:5000/transaksi
+###
+GET http://localhost:5000/transaksi_saya/1
+
+###
+GET http://localhost:5000/transaksi/1720246112057
+
+###
+POST  http://localhost:5000/transaksi
+Content-Type: application/json
+
+{
+
+     "noTransaksi": "124234234234234", 
+     "idUser": "1", 
+     "idArmada": "3", 
+     "idDriver": "2", 
+     "tglMulai": "2024-12-06/",
+     "durasi": "2",
+     "price": "500000",
+     "alamat": "Pagojengan"
+}
+
+
