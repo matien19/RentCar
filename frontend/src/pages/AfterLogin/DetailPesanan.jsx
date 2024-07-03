@@ -36,7 +36,7 @@ function DetailPesanan() {
 
   const refreshToken = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/token", { withCredentials: true });
+      const response = await axios.get("http://localhost:5064/token", { withCredentials: true });
       const decoded = jwtDecode(response.data.accessToken);
       setName(decoded.name);
       setEmail(decoded.email);
@@ -48,7 +48,7 @@ function DetailPesanan() {
 
   const getTransaksiByNo = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/transaksi/" + no_transaksi);
+      const response = await axios.get("http://localhost:5064/transaksi/" + no_transaksi);
       const data = response.data[0];
 
       setIdArmada(data.id_armada);
@@ -66,7 +66,7 @@ function DetailPesanan() {
 
   const getDetails = async (idDriver, idArmada) => {
     try {
-      const [driverResponse, armadaResponse] = await Promise.all([axios.get(`http://localhost:5000/Drivers/${idDriver}`), axios.get(`http://localhost:5000/Armadas/${idArmada}`)]);
+      const [driverResponse, armadaResponse] = await Promise.all([axios.get(`http://localhost:5064/Drivers/${idDriver}`), axios.get(`http://localhost:5064/Armadas/${idArmada}`)]);
 
       const driverData = driverResponse.data[0];
       const armadaData = armadaResponse.data[0];

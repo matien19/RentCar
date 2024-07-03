@@ -16,7 +16,7 @@ const Order = () => {
   }, []);
 
   const getArmadas = async () => {
-    const response = await axios.get("http://localhost:5000/Armadas");
+    const response = await axios.get("http://localhost:5064/Armadas");
     setArmadas(response.data);
   };
 

@@ -20,7 +20,7 @@ function InformasiAkun() {
   }, []);
   const refreshToken = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/token", { withCredentials: true });
+      const response = await axios.get("http://localhost:5064/token", { withCredentials: true });
       const decoded = jwtDecode(response.data.accessToken);
       setName(decoded.name);
       setEmail(decoded.email);

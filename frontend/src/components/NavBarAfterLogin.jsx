@@ -15,7 +15,7 @@ const Header = () => {
 
   const refreshToken = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/token", { withCredentials: true });
+      const response = await axios.get("http://localhost:5064/token", { withCredentials: true });
       const decoded = jwtDecode(response.data.accessToken);
       setName(decoded.name);
     } catch (error) {
@@ -26,7 +26,7 @@ const Header = () => {
   const navigate = useNavigate();
   const Logout = async () => {
     try {
-      await axios.delete(`http://localhost:5000/logout`);
+      await axios.delete(`http://localhost:5064/logout`);
       navigate("/");
     } catch (error) {
       console.log(error);
@@ -72,7 +72,7 @@ const Header = () => {
                   </Dropdown.Toggle>
 
                   <Dropdown.Menu>
-                    <Dropdown.Item  className='pengaturan' href='/InformasiAkun'>
+                    <Dropdown.Item className='pengaturan' href='/InformasiAkun'>
                       <i className='fas fa-cog'></i> Pengaturan
                     </Dropdown.Item>
                     {/* <Dropdown.Item href='/' onclick={Logout}>

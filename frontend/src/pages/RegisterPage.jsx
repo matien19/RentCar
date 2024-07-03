@@ -25,7 +25,7 @@ function Login() {
 
     try {
       await axios.post(
-        "http://localhost:5000/login",
+        "http://localhost:5064/login",
         {
           email: email,
           password: password,
@@ -51,7 +51,7 @@ function Login() {
   const daftar = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:5000/register", {
+      await axios.post("http://localhost:5064/register", {
         name: name,
         email: email,
         password: password,

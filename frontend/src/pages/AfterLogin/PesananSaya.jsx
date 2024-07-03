@@ -29,7 +29,7 @@ const PesananSaya = () => {
 
   const refreshToken = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/token", { withCredentials: true });
+      const response = await axios.get("http://localhost:5064/token", { withCredentials: true });
       const decoded = jwtDecode(response.data.accessToken);
       console.log(decoded);
       setIdUser(decoded.userId);
@@ -43,7 +43,7 @@ const PesananSaya = () => {
 
   const getTransaksiById = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/transaksi_saya/" + idUser);
+      const response = await axios.get("http://localhost:5064/transaksi_saya/" + idUser);
       const data = response.data;
       console.log(data);
       setOrder(data);
@@ -55,7 +55,7 @@ const PesananSaya = () => {
 
   const getArmadaById = async () => {
     try {
-      const response = await axios.get(`http://localhost:5000/Armadas/` + idArmada);
+      const response = await axios.get(`http://localhost:5064/Armadas/` + idArmada);
       const data = response.data[0];
 
       setNameArmada(data.name);

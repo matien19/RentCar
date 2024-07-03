@@ -8,7 +8,7 @@ import ArmadaRouter from "./routes/ArmadaRouter.js";
 import DriverRouter from "./routes/DriverRouter.js";
 import TransaksiRouter from "./routes/TransaksiRouter.js";
 
-const PORT = 5000;
+const PORT = 5064;
 const app = express();
 
 dotenv.config();

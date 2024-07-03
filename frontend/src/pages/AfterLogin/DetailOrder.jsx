@@ -35,7 +35,7 @@ const Order = () => {
   const saveTransaksi = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:5000/transaksi", {
+      await axios.post("http://localhost:5064/transaksi", {
         noTransaksi: noTransaksi,
         idUser: idUser,
         idArmada: idArmada,
@@ -54,7 +54,7 @@ const Order = () => {
   };
   const refreshToken = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/token", { withCredentials: true });
+      const response = await axios.get("http://localhost:5064/token", { withCredentials: true });
 
       const decoded = jwtDecode(response.data.accessToken);
       setIdUser(decoded.userId);
@@ -65,7 +65,7 @@ const Order = () => {
 
   const getArmadaById = async () => {
     try {
-      const response = await axios.get(`http://localhost:5000/Armadas/${id}`);
+      const response = await axios.get(`http://localhost:5064/Armadas/${id}`);
       setArmadas(response.data[0]);
       setIdArmada(response.data[0].id);
       setPrice(response.data[0].price);
@@ -76,7 +76,7 @@ const Order = () => {
 
   const getDrivers = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/Drivers");
+      const response = await axios.get("http://localhost:5064/Drivers");
       setDrivers(response.data);
     } catch (error) {
       console.log(error);
