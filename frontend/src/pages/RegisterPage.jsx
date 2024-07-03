@@ -33,10 +33,14 @@ function Login() {
         { withCredentials: true }
       );
 
-      setTimeout(() => {
-        alert("Login Sukses");
-        navigate("/HomePage");
-      });
+      if (email == "" && password == "") {
+        navigate("/Sign");
+      } else {
+        setTimeout(() => {
+          alert("Login Sukses");
+          navigate("/HomePage");
+        });
+      }
     } catch (error) {
       if (error.response) {
         setMsg(error.response.data.msg);

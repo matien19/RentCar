@@ -16,7 +16,7 @@ export const Register = async (req, res) => {
   //   if (password !== rePassword) return res.status(400).json({ msg: "Password dan RePasword tidak sama" });
   const [user] = await db.query(`SELECT * FROM tbl_users where email = ?`, [email]);
   if (user.length > 0) {
-    return res.status(400).json({ alert: "Email sudah terdaftar" });
+    return res.status(400).json({ msg: "Email sudah terdaftar" });
   } else {
     const salt = await bcrypt.genSalt();
     const hashPassword = await bcrypt.hash(password, salt);

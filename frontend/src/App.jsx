@@ -45,9 +45,9 @@ function App() {
           <Route path='/EditAkun' Component={EditAkun} />
           <Route path='/PesananSaya' Component={PesananSaya} />
           <Route path='/InformasiAkun' Component={InformasiAkun} />
-          <Route path='TentangKamiLogin' Component={TentangKamiLogin}/>
-          <Route path='ArmadaLogin' Component={ArmadaLogin}/>
-          <Route path='KontakLogin' Component={KontakLogin}/>
+          <Route path='/TentangKamiLogin' Component={TentangKamiLogin}/>
+          <Route path='/ArmadaLogin' Component={ArmadaLogin}/>
+          <Route path='/KontakLogin' Component={KontakLogin}/>
         </Routes>
       </Router>
     </>

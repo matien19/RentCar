@@ -1,4 +1,4 @@
-import Navbar from "../components/NavBarAfterLogin";
+import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { armadaData } from "../data/data";
 
@@ -8,7 +8,7 @@ import "../css/armada.css";
 const Armada = () => {
   return (
     <div>
-      <Navbar />
+      <Header />
       <main id='main'>
         <section className='armada pt-5'>
           <div className='container pt-5'>
@@ -20,7 +20,7 @@ const Armada = () => {
                     <h5 className='card-title'>{item.name}</h5>
                     <p className='card-text-item'>
                       <div className='d-flex justify-content-between '>
-                        <div className="icon1">
+                        <div className='icon1'>
                           <i className='fas fa-car'></i> Kursi : {item.seats}
                           <br />
                           <i className='fas fa-suitcase'></i> Koper : {item.luggage}
